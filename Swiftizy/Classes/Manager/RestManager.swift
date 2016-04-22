@@ -44,7 +44,6 @@ public class RestManager {
                 nError.errorCode = nil
                 return
             }
-            let post: NSDictionary
             do {
                 let post = try NSJSONSerialization.JSONObjectWithData(responseData,
                     options: []) as! NSDictionary
@@ -96,7 +95,6 @@ public class RestManager {
                 nError.errorCode = nil
                 return
             }
-            let post: NSDictionary
             do {
                 let post = try NSJSONSerialization.JSONObjectWithData(responseData,
                     options: []) as! NSDictionary
@@ -151,7 +149,7 @@ public class RestManager {
                 post = try NSJSONSerialization.JSONObjectWithData(responseData,
                     options: []) as! [NSDictionary]
                 NSLog("|| RestManager (GET) || ---> SUCCESS")
-                var datastring = NSString(data: responseData, encoding: NSUTF8StringEncoding)
+                let datastring = NSString(data: responseData, encoding: NSUTF8StringEncoding)
                 NSLog(datastring as! String)
                 nError.errorTitle = error?.localizedDescription
                 nError.errorDescription = error?.localizedFailureReason
@@ -205,7 +203,7 @@ public class RestManager {
                 post = try NSJSONSerialization.JSONObjectWithData(responseData,
                     options: []) as! [NSDictionary]
                 NSLog("|| RestManager (GET) || ---> SUCCESS")
-                var datastring = NSString(data: responseData, encoding: NSUTF8StringEncoding)
+                let datastring = NSString(data: responseData, encoding: NSUTF8StringEncoding)
                 NSLog(datastring as! String)
                 nError.errorTitle = error?.localizedDescription
                 nError.errorDescription = error?.localizedFailureReason

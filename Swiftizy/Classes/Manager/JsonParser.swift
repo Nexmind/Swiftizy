@@ -25,7 +25,7 @@ public class JsonParser {
         let entity = NSEntityDescription.entityForName(entityName, inManagedObjectContext: CoreDataManager.managedContext)
         
         let clz: NSManagedObject.Type = anyClass as! NSManagedObject.Type
-        var object = clz.init(entity: entity!,
+        let object = clz.init(entity: entity!,
             insertIntoManagedObjectContext: CoreDataManager.managedContext)
         
         // 2. Reflect the object to get name of each property

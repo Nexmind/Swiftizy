@@ -14,7 +14,7 @@ public class ObjectParser: NSObject {
     
     public class func convertToArray(managedObjects:NSArray?, parentNode:String? = nil) -> NSArray {
         
-        var rtnArr:NSMutableArray = NSMutableArray();
+        let rtnArr:NSMutableArray = NSMutableArray();
         //--
         if let managedObjs:[NSManagedObject] = managedObjects as? [NSManagedObject] {
             for managedObject:NSManagedObject in managedObjs {
@@ -27,7 +27,7 @@ public class ObjectParser: NSObject {
     
     public class func convertToDictionary(managedObject:NSManagedObject, parentNode:String? = nil) -> NSDictionary {
         
-        var rtnDict:NSMutableDictionary = NSMutableDictionary();
+        let rtnDict:NSMutableDictionary = NSMutableDictionary();
         //-
         let entity:NSEntityDescription = managedObject.entity;
         let properties:[String] = (entity.propertiesByName as NSDictionary).allKeys as! [String];

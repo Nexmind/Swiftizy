@@ -247,21 +247,13 @@ public class CoreDataManager {
      Reset the context
      */
     public static func reset() {
-        do {
-            try managedContext.reset()
-        } catch let error as NSError {
-            print("Could not reset \(error), \(error.userInfo)")
-        }
+        managedContext.reset()
     }
     
     /**
      Discard changes in the context since the last save
      */
     public static func discardChanges() {
-        do {
-            try managedContext.rollback()
-        } catch let error as NSError {
-            print("Could not reset \(error), \(error.userInfo)")
-        }
+        managedContext.rollback()
     }
 }
