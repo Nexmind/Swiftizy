@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Swiftizy"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "Swiftizy help you in your development with CoreData, Rest, Json,..."
 
 # This description is used to generate tags and improve search results.

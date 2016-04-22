@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Swiftizy
 
 class ViewController: UIViewController {
 
