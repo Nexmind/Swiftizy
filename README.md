@@ -124,7 +124,8 @@ CoreDataManager.reset()
 CoreDataManager.discardChanges()
 ```
 
-### HTTP REQUEST WITH JSON PARSER
+
+### HTTP request with json parser
 ##### GET
 JsonParser give you one method to consume some Json and directly create the managedObject and put information correctly in your object. 
 As all Json parser, you just need the name of attributes of your entity match with the json file.
