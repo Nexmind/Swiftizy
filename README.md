@@ -5,9 +5,13 @@
 [![License](https://img.shields.io/cocoapods/l/Swiftizy.svg?style=flat)](http://cocoapods.org/pods/Swiftizy)
 [![Platform](https://img.shields.io/cocoapods/p/Swiftizy.svg?style=flat)](http://cocoapods.org/pods/Swiftizy)
 
-## Usage
+## What's Swiftizy
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Swiftizy is a framework for help the development of application using CoreData, managed subclass and consume REST service with a loot of generics tools. It's only made for this kind of application:
+- CoreData + managed subclass
+- Consume Rest service
+
+And others little helps :)
 
 ## Requirements
 
