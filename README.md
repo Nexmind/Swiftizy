@@ -35,8 +35,8 @@ To use the CoreDataManager, you need first to create your own CoreData stack, de
 lazy var coreDataStack = CoreDataStack()
 
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-CoreDataManager.managedContext = coreDataStack.context
-return true;
+  CoreDataManager.managedContext = coreDataStack.context
+  return true;
 }
 ```
 ### Json Parser
@@ -63,12 +63,10 @@ class User: NSManagedObject {
 The PlistReader is a simple class for read a properties list.
 You need to init the PlistReader with the file you want read and execute the getField method for get your value
 ```ruby
-lazy var coreDataStack = CoreDataStack()
-
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-plistReader(plistFileName: "properties")
-// Get my rest URL
-print("Your url: \(PlistReader.getField("")!)")
+  plistReader(plistFileName: "properties")
+  // Get my rest URL
+  print("Your url: \(PlistReader.getField("url")!)")
 }
 ```
 
@@ -135,12 +133,12 @@ User the RestManager to perform a GET request. You have different version of the
 ```ruby 
 let url = "http://mywebservice.com/rest/book/all"
 RestManager.GET(url, withBehaviorResponseForArray: {(books, error) in
-if error == nil {
-for book in books {
-let myBook = JsonParser.consumeJsonAndCreateEntityInCoreData(object, anyClass: Book.self)
-}
-CoreDataManager.save()
-}
+  if error == nil {
+    for book in books {
+      let myBook = JsonParser.consumeJsonAndCreateEntityInCoreData(object, anyClass: Book.self)
+    }
+    CoreDataManager.save()
+  }
 })
 ```
 
@@ -154,13 +152,13 @@ let url= "http://mywebservice.com/rest/book/post"
 let aBook = CoreDataManager.fetchWithPredicateWithString("Book", attributeName: "title", attributeValue: "Harry Potter")[0] as! User
 let jsonBook = ObjectParser.convertToJsonString(aBook)
 RestManager.POST(url, jsonToPost: jsonBook, responseHandler: {(response, error) in
-if error == nil {
-if (response["dataString"] as! String).toBool() {
-print("Success")
-} else {
-print("Post Failed, server return false)")
-}
-}
+  if error == nil {
+    if (response["dataString"] as! String).toBool() {
+      print("Success")
+    } else {
+      print("Post Failed, server return false)")
+    }
+  }
 })
 ```
 ## Author
