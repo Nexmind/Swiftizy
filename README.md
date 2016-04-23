@@ -7,7 +7,7 @@
 
 ## What's Swiftizy
 
-Swiftizy is a framework for help the development of application using CoreData, managed subclass and consume REST service with a loot of generics tools. It's only made for this kind of application:
+Swiftizy is a framework for help the development of application using CoreData, managed subclass and consume REST service with a lot of generics tools. It's only made for this kind of application:
 - CoreData + managed subclass
 - Consume Rest service
 
@@ -43,8 +43,8 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 #####(this will be fixed soon cause it's not very cool to do this)
 Swiftizy work only with managed object subclass.
 For work with the parser, you need a little configuration:
-1. In your datamodel, change the module of your entity to "None": select your entity -> datamodel inspector -> module
-2. In your managed subclass, add the @objc annotation with the name of your Entity
+#####1. In your datamodel, change the module of your entity to "None": select your entity -> datamodel inspector -> module
+#####2. In your managed subclass, add the @objc annotation with the name of your Entity
 ```ruby
 import Foundation
 import CoreData
