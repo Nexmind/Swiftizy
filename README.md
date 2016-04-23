@@ -19,6 +19,8 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "Swiftizy"
 ```
+##Configurations
+### 
 
 ## Author
 

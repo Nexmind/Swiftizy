@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PlistReader {
+public class PlistReader {
     
     static var hmDict : NSDictionary?
     
