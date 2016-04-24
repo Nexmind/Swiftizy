@@ -9,11 +9,14 @@
 
 Swiftizy is a big help to develop Swift application using CoreData and consume REST service. 
 
-CoreData: a lot of easy method for fetching, create, delete, predicate, and a PrimaryKey system.
+####CoreData
+A lot of easy method for fetching, create, delete, predicate, and a PrimaryKey system.
 
-REST: Make GET and POST easily (DELETE & UPDATE are coming soon)
+####REST
+Make GET and POST easily (DELETE & UPDATE are coming soon)
 
-JSON: Just one line to convert your JSON in NSManagedObject subclass. No need to define key for each attributes.
+####JSON
+Just one line to convert your JSON in NSManagedObject subclass. No need to define key for each attributes.
 
 
 Typical type of application using Swiftizy:
