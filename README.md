@@ -30,7 +30,7 @@ pod "Swiftizy"
 import Swiftizy
 ```
 ### CoreDataManager 
-To use the CoreDataManager, you need first to create your own CoreData stack, declare it in AppDelegate and give your managed context to the CoreDataManager in the 
+To use the CoreDataManager, you need first to create your own CoreData stack (example in /Example), declare it in AppDelegate and give your managed context to the CoreDataManager
 ```ruby
 lazy var coreDataStack = CoreDataStack()
 
