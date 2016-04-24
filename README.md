@@ -5,9 +5,13 @@
 [![License](https://img.shields.io/cocoapods/l/Swiftizy.svg?style=flat)](http://cocoapods.org/pods/Swiftizy)
 [![Platform](https://img.shields.io/cocoapods/p/Swiftizy.svg?style=flat)](http://cocoapods.org/pods/Swiftizy)
 
-## Usage
+## What's Swiftizy
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Swiftizy is a framework for help the development of application using CoreData, managed subclass and consume REST service with a lot of generics tools. It's only made for this kind of application:
+- CoreData + managed subclass
+- Consume Rest service
+
+And others little helps :)
 
 ## Requirements
 
@@ -31,16 +35,16 @@ To use the CoreDataManager, you need first to create your own CoreData stack, de
 lazy var coreDataStack = CoreDataStack()
 
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-CoreDataManager.managedContext = coreDataStack.context
-return true;
+  CoreDataManager.managedContext = coreDataStack.context
+  return true;
 }
 ```
 ### Json Parser
 #####(this will be fixed soon cause it's not very cool to do this)
 Swiftizy work only with managed object subclass.
 For work with the parser, you need a little configuration:
-1. In your datamodel, change the module of your entity to "None": select your entity -> datamodel inspector -> module
-2. In your managed subclass, add the @objc annotation with the name of your Entity
+#####1. In your datamodel, change the module of your entity to "None": select your entity -> datamodel inspector -> module
+#####2. In your managed subclass, add the @objc annotation with the name of your Entity
 ```ruby
 import Foundation
 import CoreData
@@ -59,12 +63,10 @@ class User: NSManagedObject {
 The PlistReader is a simple class for read a properties list.
 You need to init the PlistReader with the file you want read and execute the getField method for get your value
 ```ruby
-lazy var coreDataStack = CoreDataStack()
-
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-plistReader(plistFileName: "properties")
-// Get my rest URL
-print("Your url: \(PlistReader.getField("")!)")
+  plistReader(plistFileName: "properties")
+  // Get my rest URL
+  print("Your url: \(PlistReader.getField("url")!)")
 }
 ```
 
@@ -122,7 +124,8 @@ CoreDataManager.reset()
 CoreDataManager.discardChanges()
 ```
 
-### HTTP REQUEST WITH JSON PARSER
+
+### HTTP request with json parser
 ##### GET
 JsonParser give you one method to consume some Json and directly create the managedObject and put information correctly in your object. 
 As all Json parser, you just need the name of attributes of your entity match with the json file.
@@ -131,12 +134,12 @@ User the RestManager to perform a GET request. You have different version of the
 ```ruby 
 let url = "http://mywebservice.com/rest/book/all"
 RestManager.GET(url, withBehaviorResponseForArray: {(books, error) in
-if error == nil {
-for book in books {
-let myBook = JsonParser.consumeJsonAndCreateEntityInCoreData(object, anyClass: Book.self)
-}
-CoreDataManager.save()
-}
+  if error == nil {
+    for book in books {
+      let myBook = JsonParser.consumeJsonAndCreateEntityInCoreData(object, anyClass: Book.self)
+    }
+    CoreDataManager.save()
+  }
 })
 ```
 
@@ -150,13 +153,13 @@ let url= "http://mywebservice.com/rest/book/post"
 let aBook = CoreDataManager.fetchWithPredicateWithString("Book", attributeName: "title", attributeValue: "Harry Potter")[0] as! User
 let jsonBook = ObjectParser.convertToJsonString(aBook)
 RestManager.POST(url, jsonToPost: jsonBook, responseHandler: {(response, error) in
-if error == nil {
-if (response["dataString"] as! String).toBool() {
-print("Success")
-} else {
-print("Post Failed, server return false)")
-}
-}
+  if error == nil {
+    if (response["dataString"] as! String).toBool() {
+      print("Success")
+    } else {
+      print("Post Failed, server return false)")
+    }
+  }
 })
 ```
 ## Author
