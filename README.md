@@ -7,9 +7,18 @@
 
 ## What's Swiftizy
 
-Swiftizy is a framework for help the development of application using CoreData, managed subclass and consume REST service with a lot of generics tools. It's only made for this kind of application:
-- CoreData + managed subclass
-- Consume Rest service
+Swiftizy is a big help to develop Swift application using CoreData and consume REST service. 
+CoreData: a lot of easy method for fetching, create, delete, predicate, and a PrimaryKey system.
+REST: Make GET and POST easily (DELETE & UPDATE are coming soon)
+JSON: Just one line to convert your JSON in NSManagedObject subclass. No need to define key for each attributes.
+
+
+Typical type of application using Swiftizy:
+
+1. You use CoreData and NSManagedObject subclass
+
+2. You consume a REST service sending JSON
+
 
 And others little helps :)
 
@@ -124,6 +133,14 @@ CoreDataManager.reset()
 CoreDataManager.discardChanges()
 ```
 
+##### Primary Key
+Primary Key system is not available in CoreData. But if you want one system for work with the JSON parser, you can use it. 
+Just add the "pk_" before your attribute (example: "id" -> "pk_id") 
+
+Like that, when you use the JsonParser, this will check if your object is already in the CoreData context, if he's the Json Parser return existing (CreateElseReturn).
+In the next update, you will have the choice between:
+- CreateElseReturn
+- CreateElseUpdate
 
 ### HTTP request with json parser
 ##### GET
