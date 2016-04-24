@@ -25,7 +25,14 @@ Typical type of application using Swiftizy:
 
 And others little helps :)
 
-## Requirements
+## Future features
+In the next version (2.0) will add:
+#### Improvement of existing features
+1. You will be able to choose a mode in the JSON parser for each relationship of you NSManagedObject: CreateElseReturn or CreateElseUpdate
+2. RestManager will implement PUT and DELETE
+
+#### New features
+1. A translations system
 
 ## Installation
 
