@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,11 +16,61 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swiftizy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7RS-9b-O0B">
+                                <rect key="frame" x="175" y="86" width="251" height="65"/>
+                                <color key="backgroundColor" red="0.42352941179999998" green="0.56078431370000004" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="BPD-Sh-KeL"/>
+                                    <constraint firstAttribute="width" constant="251" id="USx-o3-mcK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
+                                <color key="textColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6a7-zh-3vf">
+                                <rect key="frame" x="155" y="183" width="291" height="42"/>
+                                <color key="backgroundColor" red="0.39607843139999999" green="0.57647058819999997" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="IhS-hx-dbB"/>
+                                    <constraint firstAttribute="width" constant="291" id="sA6-Ax-xka"/>
+                                </constraints>
+                                <state key="normal" title="1. Get book and write it in CoreData">
+                                    <color key="titleColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadBooksInCoreData:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vhU-G4-gvh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTO-t1-13E">
+                                <rect key="frame" x="155" y="246" width="291" height="42"/>
+                                <color key="backgroundColor" red="0.39607843139999999" green="0.57647058819999997" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="291" id="KzN-ZJ-4QA"/>
+                                    <constraint firstAttribute="height" constant="42" id="lqj-Xk-sSE"/>
+                                </constraints>
+                                <state key="normal" title="2. Verify if books are in CoreData">
+                                    <color key="titleColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="verifyIfBooksAreInCoreData:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wFs-iY-3n9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6a7-zh-3vf" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="34X-Bd-LJn"/>
+                            <constraint firstItem="mTO-t1-13E" firstAttribute="top" secondItem="6a7-zh-3vf" secondAttribute="bottom" constant="21" id="984-hV-1fl"/>
+                            <constraint firstItem="mTO-t1-13E" firstAttribute="centerX" secondItem="6a7-zh-3vf" secondAttribute="centerX" id="L57-D1-gTO"/>
+                            <constraint firstItem="6a7-zh-3vf" firstAttribute="top" secondItem="7RS-9b-O0B" secondAttribute="bottom" constant="32" id="YuA-OY-pcz"/>
+                            <constraint firstItem="7RS-9b-O0B" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="edp-O5-im4"/>
+                            <constraint firstItem="7RS-9b-O0B" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="66" id="fiM-5L-aq0"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="440" y="361"/>
         </scene>
     </scenes>
 </document>

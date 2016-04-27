@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		15D15B8C280386A18BBCAAA6 /* Pods_Swiftizy_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89EFA4883CE731A82CDEA673 /* Pods_Swiftizy_Example.framework */; };
 		47002F7F1CCD1F5A00574A1A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47002F7E1CCD1F5A00574A1A /* CoreDataStack.swift */; };
+		47DB96EC1CD039E400959027 /* swiftizy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 47DB96EA1CD039E400959027 /* swiftizy.xcdatamodeld */; };
+		47DB96F41CD03AF100959027 /* Publisher+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DB96EE1CD03AF100959027 /* Publisher+CoreDataProperties.swift */; };
+		47DB96F51CD03AF100959027 /* Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DB96EF1CD03AF100959027 /* Publisher.swift */; };
+		47DB96F61CD03AF100959027 /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DB96F01CD03AF100959027 /* Book+CoreDataProperties.swift */; };
+		47DB96F71CD03AF100959027 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DB96F11CD03AF100959027 /* Book.swift */; };
+		47DB96F81CD03AF100959027 /* Cover+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DB96F21CD03AF100959027 /* Cover+CoreDataProperties.swift */; };
+		47DB96F91CD03AF100959027 /* Cover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DB96F31CD03AF100959027 /* Cover.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -33,7 +40,14 @@
 		128CEE0157670FF7AD2EBBDA /* Pods-Swiftizy_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiftizy_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swiftizy_Example/Pods-Swiftizy_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		403214D5FACCAA5ED4C851AD /* Pods-Swiftizy_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiftizy_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swiftizy_Tests/Pods-Swiftizy_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		43FF213186C9516CAC81F5C9 /* Pods_Swiftizy_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiftizy_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		47002F7E1CCD1F5A00574A1A /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		47002F7E1CCD1F5A00574A1A /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStack.swift; path = ../CoreDataStack.swift; sourceTree = "<group>"; };
+		47DB96EB1CD039E400959027 /* swiftizy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = swiftizy.xcdatamodel; sourceTree = "<group>"; };
+		47DB96EE1CD03AF100959027 /* Publisher+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Publisher+CoreDataProperties.swift"; path = "../CoreDataEntity/Publisher+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		47DB96EF1CD03AF100959027 /* Publisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Publisher.swift; path = ../CoreDataEntity/Publisher.swift; sourceTree = "<group>"; };
+		47DB96F01CD03AF100959027 /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Book+CoreDataProperties.swift"; path = "../CoreDataEntity/Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		47DB96F11CD03AF100959027 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Book.swift; path = ../CoreDataEntity/Book.swift; sourceTree = "<group>"; };
+		47DB96F21CD03AF100959027 /* Cover+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Cover+CoreDataProperties.swift"; path = "../CoreDataEntity/Cover+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		47DB96F31CD03AF100959027 /* Cover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cover.swift; path = ../CoreDataEntity/Cover.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Swiftizy_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiftizy_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +85,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47DB96E91CD039C300959027 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				47DB96ED1CD03AEB00959027 /* Entity */,
+				47002F7E1CCD1F5A00574A1A /* CoreDataStack.swift */,
+				47DB96EA1CD039E400959027 /* swiftizy.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		47DB96ED1CD03AEB00959027 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				47DB96EE1CD03AF100959027 /* Publisher+CoreDataProperties.swift */,
+				47DB96EF1CD03AF100959027 /* Publisher.swift */,
+				47DB96F01CD03AF100959027 /* Book+CoreDataProperties.swift */,
+				47DB96F11CD03AF100959027 /* Book.swift */,
+				47DB96F21CD03AF100959027 /* Cover+CoreDataProperties.swift */,
+				47DB96F31CD03AF100959027 /* Cover.swift */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
 		4B964CD4944716E9C3B6964E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,7 +122,6 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				47002F7E1CCD1F5A00574A1A /* CoreDataStack.swift */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for Swiftizy */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -107,6 +143,7 @@
 		607FACD21AFB9204008FA782 /* Example for Swiftizy */ = {
 			isa = PBXGroup;
 			children = (
+				47DB96E91CD039C300959027 /* CoreData */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -362,8 +399,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47DB96F71CD03AF100959027 /* Book.swift in Sources */,
+				47DB96F51CD03AF100959027 /* Publisher.swift in Sources */,
+				47DB96F41CD03AF100959027 /* Publisher+CoreDataProperties.swift in Sources */,
+				47DB96F91CD03AF100959027 /* Cover.swift in Sources */,
 				47002F7F1CCD1F5A00574A1A /* CoreDataStack.swift in Sources */,
+				47DB96F81CD03AF100959027 /* Cover+CoreDataProperties.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				47DB96EC1CD039E400959027 /* swiftizy.xcdatamodeld in Sources */,
+				47DB96F61CD03AF100959027 /* Book+CoreDataProperties.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,6 +623,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		47DB96EA1CD039E400959027 /* swiftizy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				47DB96EB1CD039E400959027 /* swiftizy.xcdatamodel */,
+			);
+			currentVersion = 47DB96EB1CD039E400959027 /* swiftizy.xcdatamodel */;
+			path = swiftizy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
 }

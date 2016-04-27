@@ -9,7 +9,7 @@ import CoreData
 
 class CoreDataStack {
     
-    let modelName = "yourModelName"
+    let modelName = "swiftizy"
     
     lazy var context: NSManagedObjectContext = {
         

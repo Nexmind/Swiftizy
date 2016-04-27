@@ -9,6 +9,11 @@
 import Foundation
 import CoreData
 
+public enum JsonParserMode {
+    case CreateElseReturn
+    case CreateElseUpdate
+}
+
 public class JsonParser {
     
     
@@ -33,7 +38,7 @@ public class JsonParser {
         let properties = class_copyPropertyList(clz.self, &propertyCount)
         var propertiesName : [String] = [String]()
         
-        for var i=0; i < Int(propertyCount); i++ {
+        for i in 0 ..< Int(propertyCount) {
             let property = properties[i]
             propertiesName.append(String(UTF8String: property_getName(property))!)
         }
@@ -77,7 +82,7 @@ public class JsonParser {
                                     } else {
                                         string += item.description + ","
                                     }
-                                    index++
+                                    index += 1
                                 }
                                 object.setValue(string, forKey: name)
                             } else {

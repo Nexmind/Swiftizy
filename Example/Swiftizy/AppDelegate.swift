@@ -7,15 +7,17 @@
 //
 
 import UIKit
+import Swiftizy
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    lazy var coreDataStack = CoreDataStack()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        CoreDataManager.managedContext = coreDataStack.context
         return true
     }
 
