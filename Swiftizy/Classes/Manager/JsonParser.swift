@@ -9,10 +9,6 @@
 import Foundation
 import CoreData
 
-public enum JsonParserMode {
-    case CreateElseReturn
-    case CreateElseUpdate
-}
 
 public class JsonParser {
     
@@ -23,6 +19,10 @@ public class JsonParser {
      - parameter dic:   the NSDictionary that contains the JSON
      - parameter anyClass:   the class of the entity.
      */
+    
+    public static func jsonToManagedObject(dic: NSDictionary, entity: AnyClass){
+        
+    }
     public static func consumeJsonAndCreateEntityInCoreData(dic: NSDictionary, anyClass: AnyClass) -> NSManagedObject {
         
         // 1. Get entity and init dynamicly the object

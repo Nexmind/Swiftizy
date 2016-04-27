@@ -99,7 +99,7 @@ public extension String
             let startIndex = self.startIndex.advancedBy(r.startIndex)
             let endIndex = self.startIndex.advancedBy(r.endIndex - 1)
             
-            return self[Range(start: startIndex, end: endIndex)]
+            return self[startIndex..<endIndex]
         }
     }
     
@@ -107,7 +107,7 @@ public extension String
     {
         let start = self.startIndex.advancedBy(startIndex)
         let end = self.startIndex.advancedBy(startIndex + length)
-        return self.substringWithRange(Range<String.Index>(start: start, end: end))
+        return self.substringWithRange(start..<end)
     }
     
     func indexOf(target: String) -> Int
@@ -124,7 +124,7 @@ public extension String
     {
         let startRange = self.startIndex.advancedBy(startIndex)
         
-        let range = self.rangeOfString(target, options: NSStringCompareOptions.LiteralSearch, range: Range<String.Index>(start: startRange, end: self.endIndex))
+        let range = self.rangeOfString(target, options: NSStringCompareOptions.LiteralSearch, range: startRange..<self.endIndex)
         
         if let range = range {
             return self.startIndex.distanceTo(range.startIndex)

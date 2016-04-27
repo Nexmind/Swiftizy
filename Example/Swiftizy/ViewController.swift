@@ -83,6 +83,15 @@ class ViewController: UIViewController {
          */
     }
     
+    @IBAction func deleteBooks(sender: AnyObject) {
+        if #available(iOS 9.0, *) {
+            CoreDataManager.batchDeleteEntity("Book")
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+    
+    
     
     @IBAction func verifyIfBooksAreInCoreData(sender: AnyObject) {
         let books = CoreDataManager.fetchForEntity("Book") as! [Book]
