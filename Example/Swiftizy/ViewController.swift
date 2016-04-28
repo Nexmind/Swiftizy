@@ -16,6 +16,17 @@ class ViewController: UIViewController {
     var activityIndicatorView: UIActivityIndicatorView? = nil
     var strLabel = UILabel()
     
+    
+    // Slow Reading
+    let urlBook1 = "https://openlibrary.org/api/books?bibkeys=ISBN:9780980200447&jscmd=data&format=json"
+    
+    // Harry Potter
+    let urlBook2 = "https://openlibrary.org/api/books?bibkeys=ISBN:9780545010221&jscmd=data&format=json"
+    
+    // Tom Sawyer
+    let urlBook3 = "https://openlibrary.org/api/books?bibkeys=ISBN:0486400778&jscmd=data&format=json"
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,14 +38,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loadBooksInCoreData(sender: AnyObject) {
-        // Slow Reading
-        let urlBook1 = "https://openlibrary.org/api/books?bibkeys=ISBN:9780980200447&jscmd=data&format=json"
-        
-        // Harry Potter
-        let urlBook2 = "https://openlibrary.org/api/books?bibkeys=ISBN:9780545010221&jscmd=data&format=json"
-        
-        // Tom Sawyer
-        let urlBook3 = "https://openlibrary.org/api/books?bibkeys=ISBN:0486400778&jscmd=data&format=json"
         
         
         
@@ -42,43 +45,41 @@ class ViewController: UIViewController {
         
         // We need this line: (response!.allValues[0] as! NSDictionary) because JSON on OpenLib have not a good format for our model, so the real json object we need is the first value of the JSON file that openlibrary return
         
+        self.progressBarDisplayer("Loading books...", true)
         RestManager.GET(urlBook1, withBehaviorResponse: {(response, error) in
             dispatch_async(dispatch_get_main_queue()) {
-                JsonParser.consumeJsonAndCreateEntityInCoreData((response!.allValues[0] as! NSDictionary), anyClass: Book.self)
+                let book = JsonParser.jsonToManagedObject((response!.allValues[0] as! NSDictionary), createElseReturn: Book.self, ignoreAttributes: ["number_of_pages"]) as! Book
+                print("\n-----< Book 1 >----- Hi, i'm \(book.pk_title!), and my number of pages is \(book.number_of_pages) cause i ignore this attribute")
                 CoreDataManager.save()
-                print("Book 1 saved !")
             }
         })
         
-        // We well modify the next book
-        self.progressBarDisplayer("Loading books...", true)
         RestManager.GET(urlBook2, withBehaviorResponse: {(response, error) in
             dispatch_async(dispatch_get_main_queue()) {
-                let book2 = JsonParser.consumeJsonAndCreateEntityInCoreData((response!.allValues[0] as! NSDictionary), anyClass: Book.self) as! Book
-                book2.number_of_pages = 500
+                let book2 = JsonParser.jsonToManagedObject((response!.allValues[0] as! NSDictionary), createElseReturn: Book.self, ignoreAttributes: nil) as! Book
                 CoreDataManager.save()
-                print("Book 2 modified and saved !")
+                print("\n-----< Book 2 >----- Hi, i'm \(book2.pk_title!), and my number of pages is \(book2.number_of_pages!)... Oops, my URL seems to dont return number_of_pages attributes ;-)")
             }
         })
         
         RestManager.GET(urlBook3, withBehaviorResponse: {(response, error) in
             dispatch_async(dispatch_get_main_queue()) {
-                JsonParser.consumeJsonAndCreateEntityInCoreData((response!.allValues[0] as! NSDictionary), anyClass: Book.self) as! Book
+                let book3 = JsonParser.jsonToManagedObject((response!.allValues[0] as! NSDictionary), createElseReturn: Book.self, ignoreAttributes: nil) as! Book
                 CoreDataManager.save()
-                print("Book 3 saved !")
+                print("\n-----< Book 3 >----- Hi, i'm \(book3.pk_title!), and my number of pages is \(book3.number_of_pages!) ")
                 self.progressBarCanceler()
             }
         })
-        
+ 
         /*
          Imagine, you can do it if you get on list of object
          Example:
          RestManager.GET(urlWithManyBooks, withBehaviorResponseForArray: {(responses, error) in
-         if error == nil {
-         for response in responses {
-         JsonParser.consumeJsonAndCreateEntityInCoreData(response, anyClass: Book.self)
-         }
-         }
+            if error == nil {
+                for response in responses {
+                    JsonParser.consumeJsonAndCreateEntityInCoreData(response, anyClass: Book.self)
+                }
+            }
          })
          */
     }
@@ -97,19 +98,65 @@ class ViewController: UIViewController {
         let books = CoreDataManager.fetchForEntity("Book") as! [Book]
         print("count of books: \(books.count)")
         var index = 0
-        for book in books {
-            index += 1
-            print("\nBook \(index): \(book.pk_title!). Number of pages: \(book.number_of_pages!)")
-            if book.publishers!.count > 0 {
-                for publisher in book.publishers! {
-                    print("Publisher: \(publisher.name!)")
-                }
-            }
-        }
-        let alert = UIAlertController(title: "Yep...", message: "You should look your logs ;-)", preferredStyle: .Alert)
+        let count = CoreDataManager.countEntity("Book")
+        let alert = UIAlertController(title: "Hey dude ! ", message: "I'm CoreData ! And i have \(count) books in my context ! ;-)", preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
+    
+    @IBAction func modifyBooksValue(sender: AnyObject) {
+    
+        let books = CoreDataManager.fetchForEntity("Book") as! [Book]
+        
+        for book in books {
+            book.number_of_pages = 10
+        }
+        
+        CoreDataManager.save()
+        let alert = UIAlertController(title: "Hey", message: "It's again me, CoreData ! Fort this test, i will put all the number_of_pages value for each book to value 10 ! Check in the tableview if all is OK after :)", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func getBookCreateElseUpdate(sender: AnyObject) {
+        let alert = UIAlertController(title: "Rest", message: "I will reload all data from the rest service, if they already exist, i update them with the value in the json... Check in tableview after if its update", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: {() in
+        
+            self.progressBarDisplayer("Loading books...", true)
+            RestManager.GET(self.urlBook1, withBehaviorResponse: {(response, error) in
+                dispatch_async(dispatch_get_main_queue()) {
+                    JsonParser.jsonToManagedObject((response!.allValues[0] as! NSDictionary), createElseUpdate: Book.self, ignoreAttributes: ["number_of_pages"]) as! Book
+                    print("\n-----< Book 1 >----- I'm fresh ! Just get update from rest service")
+                    CoreDataManager.save()
+                }
+            })
+            
+            RestManager.GET(self.urlBook2, withBehaviorResponse: {(response, error) in
+                dispatch_async(dispatch_get_main_queue()) {
+                    JsonParser.jsonToManagedObject((response!.allValues[0] as! NSDictionary), createElseUpdate: Book.self, ignoreAttributes: nil) as! Book
+                    CoreDataManager.save()
+                    print("\n-----< Book 2 >----- I'm fresh ! Just get update from rest service")
+                }
+            })
+            
+            RestManager.GET(self.urlBook3, withBehaviorResponse: {(response, error) in
+                dispatch_async(dispatch_get_main_queue()) {
+                    JsonParser.jsonToManagedObject((response!.allValues[0] as! NSDictionary), createElseUpdate: Book.self, ignoreAttributes: nil) as! Book
+                    CoreDataManager.save()
+                    print("\n-----< Book 3 >----- I'm fresh ! Just get update from rest service")
+                    self.progressBarCanceler()
+                }
+            })
+
+            
+        })
+        
+        
+    }
+    
+    
     
     
     func progressBarDisplayer(msg:String, _ indicator:Bool ) {
@@ -128,6 +175,8 @@ class ViewController: UIViewController {
         messageFrame.addSubview(strLabel)
         view.addSubview(messageFrame)
     }
+    
+    
     
     func progressBarCanceler(){
         self.view.userInteractionEnabled = true

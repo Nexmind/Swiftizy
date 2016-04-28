@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Swiftizy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7RS-9b-O0B">
-                                <rect key="frame" x="175" y="86" width="251" height="65"/>
+                                <rect key="frame" x="175" y="72" width="251" height="65"/>
                                 <color key="backgroundColor" red="0.42352941179999998" green="0.56078431370000004" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="BPD-Sh-KeL"/>
@@ -29,13 +29,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6a7-zh-3vf">
-                                <rect key="frame" x="155" y="183" width="291" height="42"/>
+                                <rect key="frame" x="155" y="153" width="291" height="42"/>
                                 <color key="backgroundColor" red="0.39607843139999999" green="0.57647058819999997" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="IhS-hx-dbB"/>
                                     <constraint firstAttribute="width" constant="291" id="sA6-Ax-xka"/>
                                 </constraints>
-                                <state key="normal" title="1. Get book and write it in CoreData">
+                                <state key="normal" title="1. Get books (CreateElseReturn)">
                                     <color key="titleColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTO-t1-13E">
-                                <rect key="frame" x="155" y="246" width="291" height="42"/>
+                                <rect key="frame" x="155" y="216" width="291" height="42"/>
                                 <color key="backgroundColor" red="0.39607843139999999" green="0.57647058819999997" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="291" id="KzN-ZJ-4QA"/>
@@ -56,8 +56,22 @@
                                     <action selector="verifyIfBooksAreInCoreData:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wFs-iY-3n9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03f-k7-1mf">
+                                <rect key="frame" x="155" y="398" width="291" height="42"/>
+                                <color key="backgroundColor" red="0.39607843139999999" green="0.57647058819999997" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="00Z-Cw-L2x"/>
+                                    <constraint firstAttribute="width" constant="291" id="6md-E4-nLL"/>
+                                </constraints>
+                                <state key="normal" title="5. Get books (CreateElseUpdate)">
+                                    <color key="titleColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getBookCreateElseUpdate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ih1-hp-Au2"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pD8-mC-sff">
-                                <rect key="frame" x="155" y="306" width="291" height="42"/>
+                                <rect key="frame" x="155" y="276" width="291" height="42"/>
                                 <color key="backgroundColor" red="0.39607843139999999" green="0.57647058819999997" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="mpo-qo-uaX"/>
@@ -70,8 +84,22 @@
                                     <segue destination="F6N-bY-wzi" kind="show" id="G0M-9O-sZN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cix-DQ-HQ6">
+                                <rect key="frame" x="155" y="337" width="291" height="42"/>
+                                <color key="backgroundColor" red="0.39607843139999999" green="0.57647058819999997" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Nb8-x1-nhN"/>
+                                    <constraint firstAttribute="width" constant="291" id="kZG-h1-xSs"/>
+                                </constraints>
+                                <state key="normal" title="4. Modify number of pages for books">
+                                    <color key="titleColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="modifyBooksValue:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EY7-Oe-IZj"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rG8-Eo-fb7">
-                                <rect key="frame" x="155" y="366" width="291" height="42"/>
+                                <rect key="frame" x="155" y="462" width="291" height="42"/>
                                 <color key="backgroundColor" red="0.85043728351593018" green="0.21816034615039825" blue="0.15920260548591614" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="291" id="7A9-pn-a6X"/>
@@ -88,12 +116,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6a7-zh-3vf" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="34X-Bd-LJn"/>
+                            <constraint firstItem="03f-k7-1mf" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="5kj-Ce-vg6"/>
+                            <constraint firstItem="Cix-DQ-HQ6" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="7Cj-pD-1AY"/>
                             <constraint firstItem="pD8-mC-sff" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="8i4-ag-tLw"/>
                             <constraint firstItem="mTO-t1-13E" firstAttribute="top" secondItem="6a7-zh-3vf" secondAttribute="bottom" constant="21" id="984-hV-1fl"/>
                             <constraint firstItem="mTO-t1-13E" firstAttribute="centerX" secondItem="6a7-zh-3vf" secondAttribute="centerX" id="L57-D1-gTO"/>
                             <constraint firstItem="rG8-Eo-fb7" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Oca-C4-Yh7"/>
-                            <constraint firstItem="rG8-Eo-fb7" firstAttribute="top" secondItem="pD8-mC-sff" secondAttribute="bottom" constant="18" id="Sq8-st-Dq9"/>
+                            <constraint firstItem="03f-k7-1mf" firstAttribute="top" secondItem="Cix-DQ-HQ6" secondAttribute="bottom" constant="19" id="QTk-7O-KAa"/>
                             <constraint firstItem="6a7-zh-3vf" firstAttribute="top" secondItem="7RS-9b-O0B" secondAttribute="bottom" constant="32" id="YuA-OY-pcz"/>
+                            <constraint firstItem="Cix-DQ-HQ6" firstAttribute="top" secondItem="pD8-mC-sff" secondAttribute="bottom" constant="19" id="cKN-fw-Qec"/>
+                            <constraint firstItem="rG8-Eo-fb7" firstAttribute="top" secondItem="03f-k7-1mf" secondAttribute="bottom" constant="22" id="dkc-TE-80o"/>
                             <constraint firstItem="pD8-mC-sff" firstAttribute="top" secondItem="mTO-t1-13E" secondAttribute="bottom" constant="18" id="ebb-qj-R5F"/>
                             <constraint firstItem="7RS-9b-O0B" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="edp-O5-im4"/>
                             <constraint firstItem="7RS-9b-O0B" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="66" id="fiM-5L-aq0"/>

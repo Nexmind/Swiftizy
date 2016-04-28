@@ -23,8 +23,7 @@ public extension NSManagedObject {
     func valueToIntForKey(key : String) -> Int{
         return self.valueForKey(key)?.integerValue ?? 0
     }
-    
-    
+        
     func valueToDoubleForKey(key : String) -> Double{
         return self.valueForKey(key) as! Double
     }

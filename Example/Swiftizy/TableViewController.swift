@@ -17,7 +17,7 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.books = CoreDataManager.fetchForEntity("Book") as! [Book]
+        self.books = CoreDataManager.fetchForEntity("Book") as? [Book]
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -31,7 +31,7 @@ class TableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let book = books![indexPath.row]
         let publisher = (book.publishers?.allObjects as! [Publisher])[0]
-        let alert = UIAlertController(title: "Book details", message: "Title: \(book.pk_title!)\n Pages: \(book.number_of_pages!)\n Publisher: \(publisher.name!)", preferredStyle: .Alert)
+        let alert = UIAlertController(title: "Book details", message: "Title: \(book.pk_title!)\n Pages: \(book.number_of_pages)\n Publisher: \(publisher.name!)", preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
