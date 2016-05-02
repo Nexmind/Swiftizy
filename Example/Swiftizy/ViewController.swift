@@ -39,8 +39,6 @@ class ViewController: UIViewController {
     
     @IBAction func loadBooksInCoreData(sender: AnyObject) {
         
-        
-        
         // Just for the example, the title is tagged as the primary key. Like that, you can press the button a lot of time, books will not duplicate
         
         // We need this line: (response!.allValues[0] as! NSDictionary) because JSON on OpenLib have not a good format for our model, so the real json object we need is the first value of the JSON file that openlibrary return
@@ -70,23 +68,11 @@ class ViewController: UIViewController {
                 self.progressBarCanceler()
             }
         })
- 
-        /*
-         Imagine, you can do it if you get on list of object
-         Example:
-         RestManager.GET(urlWithManyBooks, withBehaviorResponseForArray: {(responses, error) in
-            if error == nil {
-                for response in responses {
-                    JsonParser.consumeJsonAndCreateEntityInCoreData(response, anyClass: Book.self)
-                }
-            }
-         })
-         */
     }
     
     @IBAction func deleteBooks(sender: AnyObject) {
         if #available(iOS 9.0, *) {
-            CoreDataManager.batchDeleteEntity("Book")
+            CoreDataManager.Delete.batch("Book")
         } else {
             // Fallback on earlier versions
         }
@@ -95,10 +81,9 @@ class ViewController: UIViewController {
     
     
     @IBAction func verifyIfBooksAreInCoreData(sender: AnyObject) {
-        let books = CoreDataManager.fetchForEntity("Book") as! [Book]
+        let books = CoreDataManager.Fetch.all("Book") as! [Book]
         print("count of books: \(books.count)")
-        var index = 0
-        let count = CoreDataManager.countEntity("Book")
+        let count = CoreDataManager.Count.all("Book")
         let alert = UIAlertController(title: "Hey dude ! ", message: "I'm CoreData ! And i have \(count) books in my context ! ;-)", preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
@@ -106,7 +91,7 @@ class ViewController: UIViewController {
     
     @IBAction func modifyBooksValue(sender: AnyObject) {
     
-        let books = CoreDataManager.fetchForEntity("Book") as! [Book]
+        let books = CoreDataManager.Fetch.all("Book") as! [Book]
         
         for book in books {
             book.number_of_pages = 10
@@ -155,8 +140,6 @@ class ViewController: UIViewController {
         
         
     }
-    
-    
     
     
     func progressBarDisplayer(msg:String, _ indicator:Bool ) {

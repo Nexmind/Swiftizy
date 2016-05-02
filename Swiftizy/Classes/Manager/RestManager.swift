@@ -326,17 +326,65 @@ public class RestManager {
     /**
      DELETE Method on the given URL without response
      - returns: Nother
-     - parameter url:     The URL for calling WS.
+     - parameter url: The URL for calling WS.
+     - parameter jsonToSend: object in JSON you want delete
+     - parameter responseHandler: the response handler when server back a response
      */
-    static func DELETE(url: String){
-        let firstPostEndpoint: String = url
-        let firstPostUrlRequest = NSMutableURLRequest(URL: NSURL(string: firstPostEndpoint)!)
-        firstPostUrlRequest.HTTPMethod = "DELETE"
-        
+    public static func DELETE(url: String, jsonToSend: String, responseHandler: (NSDictionary?, NexosError) -> Void){
+        // create the request & response
+        NSURLCache.sharedURLCache().removeAllCachedResponses()
+        let request = NSMutableURLRequest(URL: NSURL(string: url)!, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData, timeoutInterval: 10)
         let config = NSURLSessionConfiguration.defaultSessionConfiguration()
         let session = NSURLSession(configuration: config)
-        let task = session.dataTaskWithRequest(firstPostUrlRequest)
-        NSLog("|| RestManager (DELETE) || ---> SUCCESS")
+        
+        
+        // create some JSON data and configure the request
+        let jsonString = jsonToSend
+        request.HTTPBody = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
+        request.HTTPMethod = "DELETE"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let nError : NexosError = NexosError()
+        // send the request
+        let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) in
+            guard let responseData = data else {
+                NSLog("---< ! Warning ! >--- RestManager (DELETE RESPONSE): did not receive data")
+                nError.errorTitle = error?.localizedDescription
+                nError.errorDescription = error?.localizedFailureReason
+                nError.errorCode = error?.code
+                responseHandler(nil, nError)
+                return
+            }
+            guard error == nil else {
+                NSLog("---< !!! ERROR !!! >--- RestManager (DELETE RESPONSE): calling GET on the given method (verify URL)")
+                nError.errorTitle = nil
+                nError.errorDescription = nil
+                nError.errorCode = nil
+                responseHandler(nil, nError)
+                return
+            }
+            var post: NSMutableDictionary
+            do {
+                let datastring = NSString(data: responseData, encoding: NSUTF8StringEncoding)
+                NSLog(datastring as! String)
+                let post = try NSJSONSerialization.JSONObjectWithData(responseData,
+                    options: []) as! NSDictionary
+                NSLog("|| RestManager (DELETE RESPONSE) || ---> SUCCESS")
+                nError.errorTitle = error?.localizedDescription
+                nError.errorDescription = error?.localizedFailureReason
+                nError.errorCode = error?.code
+                responseHandler(post, nError)
+            } catch  {
+                NSLog("---< !!! ERROR !!! >--- RestManager (DELETE RESPONSE): trying to convert data to JSON failed")
+                nError.errorTitle = "JSON Failed"
+                nError.errorDescription = "Converting the response to JSON just failed"
+                nError.errorCode = 200
+                let datastring = NSString(data: responseData, encoding: NSUTF8StringEncoding)
+                post = NSMutableDictionary()
+                post.setValue(datastring, forKey: "dataString")
+                responseHandler(post, nError)
+                return
+            }
+        })
         task.resume()
     }
     
@@ -346,7 +394,7 @@ public class RestManager {
      - parameter url:     The URL for calling WS.
      - parameter withBehavior:   Behavior after the request, get Bool (TRUE if SUCCESS, else FALSE).
      */
-    static func DELETE(url: String, withBehavior responseHandler: (Bool, NexosError) -> Void){
+    public static func DELETE(url: String, withBehavior responseHandler: (Bool, NexosError) -> Void){
         let nError = NexosError()
         let firstPostEndpoint: String = url
         let firstPostUrlRequest = NSMutableURLRequest(URL: NSURL(string: firstPostEndpoint)!)

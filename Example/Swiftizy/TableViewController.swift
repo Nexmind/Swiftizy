@@ -17,7 +17,7 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.books = CoreDataManager.fetchForEntity("Book") as? [Book]
+        self.books = CoreDataManager.Fetch.all("Book") as? [Book]
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

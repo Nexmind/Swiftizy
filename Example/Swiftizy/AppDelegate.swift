@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         CoreDataManager.managedContext = coreDataStack.context
+        Translations.initialize("en", currentLang: "fr")
         return true
     }
 

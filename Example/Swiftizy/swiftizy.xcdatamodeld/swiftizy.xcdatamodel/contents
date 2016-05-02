@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15C50" minimumToolsVersion="Xcode 7.0">
-    <entity name="Book" representedClassName="Book" syncable="YES">
+    <entity name="Book" representedClassName=".Book" syncable="YES">
         <attribute name="number_of_pages" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="pk_title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="publish_date" optional="YES" attributeType="String" syncable="YES"/>
@@ -8,12 +8,12 @@
         <relationship name="cover" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cover" syncable="YES"/>
         <relationship name="publishers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Publisher" syncable="YES"/>
     </entity>
-    <entity name="Cover" representedClassName="Cover" syncable="YES">
+    <entity name="Cover" representedClassName=".Cover" syncable="YES">
         <attribute name="large" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="medium" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="small" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Publisher" representedClassName="Publisher" syncable="YES">
+    <entity name="Publisher" representedClassName=".Publisher" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>

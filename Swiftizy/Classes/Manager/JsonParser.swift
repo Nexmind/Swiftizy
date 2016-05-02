@@ -38,7 +38,8 @@ public class JsonParser {
     static func consumeJsonAndCreateEntityInCoreData(dic: NSDictionary, anyClass: AnyClass, batchDescription: JsonRelationshipDescriptionType?, ignoreAttributes: [String]?) -> NSManagedObject {
         
         // 1. Get entity and init dynamicly the object
-        let entityName = NSStringFromClass(anyClass)
+        let entityName = NSStringFromClass(anyClass).pathExtension
+        print(NSStringFromClass(anyClass).pathExtension)
         let entity = NSEntityDescription.entityForName(entityName, inManagedObjectContext: CoreDataManager.managedContext)
         
         let clz: NSManagedObject.Type = anyClass as! NSManagedObject.Type
@@ -72,7 +73,8 @@ public class JsonParser {
                             // If yes, check if TO-ONE
                             if !descr.toMany {
                                 let nameDest = descr.destinationEntity?.name!
-                                let anyClass : NSManagedObject.Type = NSClassFromString(nameDest!) as! NSManagedObject.Type
+                                let className = "\(NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String).\(nameDest!)"
+                                let anyClass : NSManagedObject.Type = NSClassFromString(className) as! NSManagedObject.Type
                                 if !InternalToolsForParser.propertyIsNil(name, dic: dic) {
                                     object.setValue(self.consumeJsonAndCreateEntityInCoreData((dic[name] as! NSDictionary), anyClass: anyClass, batchDescription: batchDescription, ignoreAttributes: ignoreAttributes), forKey: name)
                                 }
@@ -80,7 +82,8 @@ public class JsonParser {
                             } else {
                                 let arrayOfDic = dic[name] as! [NSDictionary]
                                 let nameDest = descr.destinationEntity?.name!
-                                let anyClass : NSManagedObject.Type = NSClassFromString(nameDest!) as! NSManagedObject.Type
+                                let className = "\(NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String).\(nameDest!)"
+                                let anyClass : NSManagedObject.Type = NSClassFromString(className) as! NSManagedObject.Type
                                 let set = NSMutableSet()
                                 for arrayItem in arrayOfDic {
                                     let descrObject = self.consumeJsonAndCreateEntityInCoreData((arrayItem), anyClass: anyClass, batchDescription: batchDescription, ignoreAttributes: ignoreAttributes)
@@ -175,7 +178,8 @@ public class JsonParser {
                             // If yes, check if TO-ONE
                             if !descr.toMany {
                                 let nameDest = descr.destinationEntity?.name!
-                                let anyClass : NSManagedObject.Type = NSClassFromString(nameDest!) as! NSManagedObject.Type
+                                let className = "\(NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String).\(nameDest!)"
+                                let anyClass : NSManagedObject.Type = NSClassFromString(className) as! NSManagedObject.Type
                                 if !InternalToolsForParser.propertyIsNil(name, dic: dic) {
                                     object.setValue(self.consumeJsonAndCreateEntityInCoreData((dic[name] as! NSDictionary), anyClass: anyClass, batchDescription: batchDescription, ignoreAttributes: ignoreAttributes), forKey: name)
                                 }
@@ -183,7 +187,8 @@ public class JsonParser {
                             } else {
                                 let arrayOfDic = dic[name] as! [NSDictionary]
                                 let nameDest = descr.destinationEntity?.name!
-                                let anyClass : NSManagedObject.Type = NSClassFromString(nameDest!) as! NSManagedObject.Type
+                                let className = "\(NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String).\(nameDest!)"
+                                let anyClass : NSManagedObject.Type = NSClassFromString(className) as! NSManagedObject.Type
                                 let set = NSMutableSet()
                                 for arrayItem in arrayOfDic {
                                     let descrObject = self.consumeJsonAndCreateEntityInCoreData((arrayItem), anyClass: anyClass, batchDescription: batchDescription, ignoreAttributes: ignoreAttributes)

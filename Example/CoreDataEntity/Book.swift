@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-@objc(Book)
 class Book: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
