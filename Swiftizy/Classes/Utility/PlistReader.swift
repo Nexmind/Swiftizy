@@ -11,16 +11,16 @@ import UIKit
 
 public class PlistReader {
     
-    static var hmDict : NSDictionary?
+    var hmDict : NSDictionary?
     
     public init(plistFileName : String){
         if let path = NSBundle.mainBundle().pathForResource(plistFileName, ofType: "plist")
         {
-            PlistReader.hmDict = NSDictionary(contentsOfFile: path)
+            hmDict = NSDictionary(contentsOfFile: path)
         }
     }
     
-    class func getField(key : String) -> String?{
+    public func getField(key : String) -> String?{
         if let dict = hmDict {
             return (dict[key] as? String)!
         }

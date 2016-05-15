@@ -155,12 +155,6 @@ With a define predicate
 let users: [User] = CoreDataManager.Fetch.equalString("User", attributeName: "firstname", attributeValue: "Jhon") as [User]
 ```
 
-With your predicate
-
-```ruby
-let users: [User] = CoreDataManager.Fetch.equalString("User", attributeName: "firstname", attributeValue: "Jhon") as [User]
-```
-
 Fetching with yours predicates (and descriptors if needed)
 ```ruby
 let predicate: NSPredicate = NSPredicate(format: "age = %d", 27)
