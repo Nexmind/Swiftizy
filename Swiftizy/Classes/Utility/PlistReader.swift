@@ -13,18 +13,11 @@ public class PlistReader {
     
     static var hmDict : NSDictionary?
     
-    init(plistFileName : String){
+    public init(plistFileName : String){
         if let path = NSBundle.mainBundle().pathForResource(plistFileName, ofType: "plist")
         {
             PlistReader.hmDict = NSDictionary(contentsOfFile: path)
         }
-    }
-    
-    class func getMainColor() -> UIColor{
-        let red = Int(self.hmDict!["RED"] as! String)
-        let green = Int(self.hmDict!["GREEN"] as! String)
-        let blue = Int(self.hmDict!["BLUE"] as! String)
-        return UIColor(red: red!, green: green!, blue: blue!)
     }
     
     class func getField(key : String) -> String?{
