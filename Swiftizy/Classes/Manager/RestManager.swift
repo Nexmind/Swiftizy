@@ -267,13 +267,13 @@ public class RestManager {
                 NSLog("|| RestManager (POST RESPONSE) || ---> SUCCESS")
                 nError.errorTitle = error?.localizedDescription
                 nError.errorDescription = error?.localizedFailureReason
-                nError.errorCode = error?.code
+                nError.errorCode = 200
                 responseHandler(post, nError)
             } catch  {
                 NSLog("---< !!! ERROR !!! >--- RestManager (POST RESPONSE): trying to convert data to JSON failed")
                 nError.errorTitle = "JSON Failed"
                 nError.errorDescription = "Converting the response to JSON just failed"
-                nError.errorCode = 200
+                nError.errorCode = 207
                 let datastring = NSString(data: responseData, encoding: NSUTF8StringEncoding)
                 post = NSMutableDictionary()
                 post.setValue(datastring, forKey: "dataString")

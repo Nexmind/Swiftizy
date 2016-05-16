@@ -9,9 +9,9 @@
 import Foundation
 
 public class NexosError{
-    var errorTitle : String?
-    var errorDescription : String?
-    var errorCode : Int?
+    public var errorTitle : String?
+    public var errorDescription : String?
+    public var errorCode : Int?
     
     init(){
         errorTitle = nil
