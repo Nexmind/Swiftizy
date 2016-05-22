@@ -17,6 +17,10 @@ public class RestManager {
      - parameter url:     The URL for calling WS.
      - parameter responseHandler:   Behavior after the request.
      */
+    
+    public static var authorizationString: String? = nil
+    public static var authorizationNeeded: Bool = false
+    
     public static func GET(url: String, withBehaviorResponse responseHandler: (NSDictionary?, NexosError) -> Void){
         let postEndpoint: String = url
         let nError : NexosError = NexosError()
@@ -24,9 +28,13 @@ public class RestManager {
             NSLog("---< !!! ERROR !!! >--- RestManager (GET): cannot create URL")
             return
         }
-        let urlRequest = NSURLRequest(URL: NSUrl)
+        let urlRequest = NSMutableURLRequest(URL: NSUrl)
         let config = NSURLSessionConfiguration.defaultSessionConfiguration()
         let session = NSURLSession(configuration: config)
+        
+        if authorizationNeeded {
+            urlRequest.setValue("Basic \(RestManager.authorizationString!)", forHTTPHeaderField: "Authorization")
+        }
         
         let task = session.dataTaskWithRequest(urlRequest, completionHandler: { (data, response, error) in
             guard let responseData = data else {
@@ -126,9 +134,14 @@ public class RestManager {
             return
         }
         
-        let urlRequest = NSURLRequest(URL: NSUrl, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData, timeoutInterval: 20)
+        let urlRequest = NSMutableURLRequest(URL: NSUrl, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData, timeoutInterval: 20)
         let config = NSURLSessionConfiguration.defaultSessionConfiguration()
         let session = NSURLSession(configuration: config)
+        
+        if authorizationNeeded {
+            urlRequest.setValue("Basic \(RestManager.authorizationString!)", forHTTPHeaderField: "Authorization")
+        }
+        
         let task = session.dataTaskWithRequest(urlRequest, completionHandler: { (data, response, error) in
             guard let responseData = data else {
                 NSLog("---< ! Warning ! >--- RestManager (GET): did not receive data")
@@ -239,6 +252,11 @@ public class RestManager {
         request.HTTPBody = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
         request.HTTPMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        if authorizationNeeded {
+            request.setValue("Basic \(RestManager.authorizationString!)", forHTTPHeaderField: "Authorization")
+        }
+        
         let nError : NexosError = NexosError()
         // send the request
         let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) in
@@ -301,6 +319,10 @@ public class RestManager {
         request.HTTPMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
+        if authorizationNeeded {
+            request.setValue("Basic \(RestManager.authorizationString!)", forHTTPHeaderField: "Authorization")
+        }
+        
         // send the request
         do{
             try NSURLConnection.sendSynchronousRequest(request, returningResponse: &response)
@@ -343,6 +365,9 @@ public class RestManager {
         request.HTTPBody = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
         request.HTTPMethod = "DELETE"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        if authorizationNeeded {
+            request.setValue("Basic \(RestManager.authorizationString!)", forHTTPHeaderField: "Authorization")
+        }
         let nError : NexosError = NexosError()
         // send the request
         let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) in

@@ -107,6 +107,9 @@ class ViewController: UIViewController {
     @IBAction func getBookCreateElseUpdate(sender: AnyObject) {
         let alert = UIAlertController(title: "Rest", message: "I will reload all data from the rest service, if they already exist, i update them with the value in the json... Check in tableview after if its update", preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+        
+        RestManager.authorizationNeeded = false
+        
         self.presentViewController(alert, animated: true, completion: {() in
         
             self.progressBarDisplayer("Loading books...", true)
