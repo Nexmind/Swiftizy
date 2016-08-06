@@ -52,7 +52,6 @@ public class Translations {
         let bundle = NSBundle.mainBundle()
         let langPath = bundle.pathForResource(self.currentLangCode, ofType: "txt")
         let defaultPath = bundle.pathForResource(defaultLanguage, ofType: "txt")
-        var result : [String : String] = [String : String]()
         if langPath != nil {
             if let aStreamReader = StreamReader(path: langPath!) {
                 self.readAndPutFileInHm(aStreamReader)

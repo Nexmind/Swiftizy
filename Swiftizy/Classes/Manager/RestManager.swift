@@ -323,7 +323,7 @@ public class RestManager {
         request.HTTPBody = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
         request.HTTPMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
+        requestChanger(request)
         if authorizationNeeded {
             request.setValue("Basic \(RestManager.authorizationString!)", forHTTPHeaderField: "Authorization")
         }
