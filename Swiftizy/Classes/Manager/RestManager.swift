@@ -303,6 +303,79 @@ public class RestManager {
     }
     
     /**
+     POST Method on the given URL asynchronous
+     - returns: Nother
+     - parameter url:     The URL for calling WS.
+     - parameter jsonToPost:   json string to send
+     - parameter responseHandler:   response after the post (response, error) if not parsable, return data in string (dataString).
+     - parameter requestChanger: custom NSMutableURLRequest
+     */
+    public static func POST(url: String, jsonToPost: String, changeRequestParameter requestChanger: (NSMutableURLRequest) -> Void, responseHandler: (NSDictionary?, NexosError) -> Void){
+        // create the request & response
+        NSURLCache.sharedURLCache().removeAllCachedResponses()
+        let request = NSMutableURLRequest(URL: NSURL(string: url)!, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData, timeoutInterval: 10)
+        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let session = NSURLSession(configuration: config)
+        
+        
+        // create some JSON data and configure the request
+        let jsonString = jsonToPost
+        request.HTTPBody = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
+        request.HTTPMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        if authorizationNeeded {
+            request.setValue("Basic \(RestManager.authorizationString!)", forHTTPHeaderField: "Authorization")
+        }
+        
+        let nError : NexosError = NexosError()
+        // send the request
+        let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) in
+            guard let responseData = data else {
+                NSLog("---< ! Warning ! >--- RestManager (POST RESPONSE): did not receive data")
+                nError.errorTitle = error?.localizedDescription
+                nError.errorDescription = error?.localizedFailureReason
+                nError.errorCode = error?.code
+                responseHandler(nil, nError)
+                return
+            }
+            guard error == nil else {
+                NSLog("---< !!! ERROR !!! >--- RestManager (POST RESPONSE): calling GET on the given method (verify URL)")
+                nError.errorTitle = nil
+                nError.errorDescription = nil
+                nError.errorCode = nil
+                responseHandler(nil, nError)
+                return
+            }
+            var post: NSMutableDictionary
+            do {
+                let datastring = NSString(data: responseData, encoding: NSUTF8StringEncoding)
+                NSLog(datastring as! String)
+                let post = try NSJSONSerialization.JSONObjectWithData(responseData,
+                    options: []) as! NSDictionary
+                NSLog("|| RestManager (POST RESPONSE) || ---> SUCCESS")
+                nError.errorTitle = error?.localizedDescription
+                nError.errorDescription = error?.localizedFailureReason
+                nError.errorCode = 200
+                responseHandler(post, nError)
+            } catch  {
+                NSLog("---< !!! ERROR !!! >--- RestManager (POST RESPONSE): trying to convert data to JSON failed")
+                nError.errorTitle = "JSON Failed"
+                nError.errorDescription = "Converting the response to JSON just failed"
+                nError.errorCode = 207
+                let datastring = NSString(data: responseData, encoding: NSUTF8StringEncoding)
+                post = NSMutableDictionary()
+                post.setValue(datastring, forKey: "dataString")
+                responseHandler(post, nError)
+                return
+            }
+        })
+        task.resume()
+    }
+    
+    
+    
+    /**
      POST Method on the given URL synchronous
      - returns: true if success, false if failed
      - parameter url:     The URL for calling WS.

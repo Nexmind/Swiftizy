@@ -52,6 +52,7 @@ class ViewController: UIViewController {
             }
         })
         
+        
         RestManager.GET(urlBook2, withBehaviorResponse: {(response, error) in
             dispatch_async(dispatch_get_main_queue()) {
                 let book2 = JsonParser.jsonToManagedObject((response!.allValues[0] as! NSDictionary), createElseReturn: Book.self, ignoreAttributes: nil) as! Book
