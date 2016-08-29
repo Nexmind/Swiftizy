@@ -62,7 +62,13 @@ public class RestManager {
                 responseHandler(post, nError)
             } catch  {
                 NSLog("---< !!! ERROR !!! >--- RestManager (GET): trying to convert data to JSON failed")
-                responseHandler(nil, nError)
+                nError.errorTitle = "JSON Failed"
+                nError.errorDescription = "Converting the response to JSON just failed"
+                nError.errorCode = 207
+                let post = NSMutableDictionary()
+                let datastring = NSString(data: responseData, encoding: NSUTF8StringEncoding)
+                post.setValue(datastring, forKey: "dataString")
+                responseHandler(post, nError)
                 return
             }
         })
@@ -105,7 +111,7 @@ public class RestManager {
             }
             do {
                 let post = try NSJSONSerialization.JSONObjectWithData(responseData,
-                    options: []) as! NSDictionary
+                    options: []) as! NSMutableDictionary
                 NSLog("|| RestManager (GET) || ---> SUCCESS")
                 nError.errorTitle = error?.localizedDescription
                 nError.errorDescription = error?.localizedFailureReason
@@ -113,7 +119,13 @@ public class RestManager {
                 responseHandler(post, nError)
             } catch  {
                 NSLog("---< !!! ERROR !!! >--- RestManager (GET): trying to convert data to JSON failed")
-                responseHandler(nil, nError)
+                nError.errorTitle = "JSON Failed"
+                nError.errorDescription = "Converting the response to JSON just failed"
+                nError.errorCode = 207
+                let post = NSMutableDictionary()
+                let datastring = NSString(data: responseData, encoding: NSUTF8StringEncoding)
+                post.setValue(datastring, forKey: "dataString")
+                responseHandler(post, nError)
                 return
             }
         })
