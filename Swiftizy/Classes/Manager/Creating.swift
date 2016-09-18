@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-@available(iOS 10.0, *)
 public class Creating {
     
     var managedContext : NSManagedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)

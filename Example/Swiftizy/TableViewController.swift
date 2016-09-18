@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import Swiftizy
 
-@available(iOS 10.0, *)
 class TableViewController: UITableViewController {
 
     

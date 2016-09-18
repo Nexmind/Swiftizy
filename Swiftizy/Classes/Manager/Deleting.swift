@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-@available(iOS 10.0, *)
 public class Deleting {
     
     var managedContext : NSManagedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
@@ -18,8 +17,9 @@ public class Deleting {
         self.managedContext = context
     }
     
+    @available(iOS 9.0, *)
     public func batch(entity : AnyClass){
-        let request: NSFetchRequest<NSFetchRequestResult> = entity.fetchRequest()
+        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: NSStringFromClass(entity))
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: request)
         
         do {

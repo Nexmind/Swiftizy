@@ -15,13 +15,9 @@ public class CoreDataManager {
     
     public static var managedContext : NSManagedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
     
-    @available(iOS 10.0, *)
     public static var Fetch: Fetching = Fetching(context: managedContext)
-    @available(iOS 10.0, *)
     public static var Create: Creating = Creating(context: managedContext)
-    @available(iOS 10.0, *)
     public static var Count: Counting = Counting(context: managedContext)
-    @available(iOS 10.0, *)
     public static var Delete: Deleting = Deleting(context: managedContext)
     
     

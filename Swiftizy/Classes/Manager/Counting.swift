@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-@available(iOS 10.0, *)
 public class Counting {
     
     var managedContext : NSManagedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
@@ -19,7 +18,7 @@ public class Counting {
     }
     
     public func all(entity: AnyClass) -> Int {
-        let request: NSFetchRequest<NSFetchRequestResult> = entity.fetchRequest()
+        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: NSStringFromClass(entity))
         request.includesSubentities = false
         do {
             let count: Int = try self.managedContext.count(for: request)
@@ -34,7 +33,7 @@ public class Counting {
     }
     
     public func custom(entity: AnyClass, predicate: NSPredicate) -> Int{
-        let request: NSFetchRequest<NSFetchRequestResult> = entity.fetchRequest()
+        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: NSStringFromClass(entity))
         request.predicate = predicate
         request.includesSubentities = false
         

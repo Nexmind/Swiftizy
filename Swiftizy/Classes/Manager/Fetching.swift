@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-@available(iOS 10.0, *)
 public class Fetching {
     
     var managedContext : NSManagedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
@@ -22,7 +21,7 @@ public class Fetching {
      Find all for the entity
      */
     public func all(entity: AnyClass) -> [NSManagedObject]{
-        let request: NSFetchRequest<NSFetchRequestResult> = entity.fetchRequest()
+        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: NSStringFromClass(entity).pathExtension)
         
         do {
             let results =
@@ -41,7 +40,7 @@ public class Fetching {
     public func orderBy(entity : AnyClass, orderBy : String, ascending: Bool) -> [NSManagedObject]{
         let descriptor = NSSortDescriptor(key: orderBy, ascending: ascending)
         
-        let request: NSFetchRequest<NSFetchRequestResult> = entity.fetchRequest()
+        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: NSStringFromClass(entity).pathExtension)
         request.sortDescriptors = [descriptor]
         
         do {
@@ -57,7 +56,7 @@ public class Fetching {
     
     public func custom(entity : AnyClass, descriptors : [NSSortDescriptor]?, predicate : NSPredicate?) -> [NSManagedObject]{
         
-        let request: NSFetchRequest<NSFetchRequestResult> = entity.fetchRequest()
+        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: NSStringFromClass(entity).pathExtension)
         request.sortDescriptors = descriptors
         request.predicate = predicate
         do {
@@ -73,7 +72,7 @@ public class Fetching {
     
     public func equalString(entity : AnyClass, attributeName : String, attributeValue: String) -> [NSManagedObject]{
         
-        let request: NSFetchRequest<NSFetchRequestResult> = entity.fetchRequest()
+        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: NSStringFromClass(entity).pathExtension)
         request.predicate = NSPredicate(format: "\(attributeName) == %@", attributeValue)
         do{
             if let fetchResults = try managedContext.fetch(request) as? [NSManagedObject] {
@@ -87,7 +86,7 @@ public class Fetching {
     
     public func equalInt(entity : AnyClass, attributeName : String, attributeValue: Int) -> [NSManagedObject]{
         
-        let request: NSFetchRequest<NSFetchRequestResult> = entity.fetchRequest()
+        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: NSStringFromClass(entity).pathExtension)
         request.predicate = NSPredicate(format: "\(attributeName) = %d", attributeValue)
         do{
             if let fetchResults = try managedContext.fetch(request) as? [NSManagedObject] {
@@ -101,7 +100,7 @@ public class Fetching {
     
     public func equalBool(entity : AnyClass, attributeName : String, bool: Bool) -> [NSManagedObject] {
         
-        let request: NSFetchRequest<NSFetchRequestResult> = entity.fetchRequest()
+        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: NSStringFromClass(entity).pathExtension)
         request.predicate = NSPredicate(format: "\(attributeName) = \(bool)")
         do{
             if let fetchResults = try managedContext.fetch(request) as? [NSManagedObject] {
