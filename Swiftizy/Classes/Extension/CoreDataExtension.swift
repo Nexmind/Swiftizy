@@ -12,8 +12,8 @@ import CoreData
 public extension NSManagedObject {
     func valueToStringForKey(key : String) -> String{
         var result: String
-        if let _ = self.valueForKey(key) {
-            result = self.valueForKey(key) as! String
+        if let _ = self.value(forKey: key) {
+            result = self.value(forKey: key) as! String
         } else {
             result = ""
         }
@@ -21,14 +21,14 @@ public extension NSManagedObject {
     }
     
     func valueToIntForKey(key : String) -> Int{
-        return self.valueForKey(key)?.integerValue ?? 0
+        return (self.value(forKey: key) as AnyObject).integerValue ?? 0
     }
         
     func valueToDoubleForKey(key : String) -> Double{
-        return self.valueForKey(key) as! Double
+        return self.value(forKey: key) as! Double
     }
     
     func valueToBoolForKey(key : String) -> Bool{
-        return self.valueForKey(key) as! Bool
+        return self.value(forKey: key) as! Bool
     }
 }

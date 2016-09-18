@@ -9,33 +9,33 @@
 import Foundation
 import CoreData
 
+@available(iOS 10.0, *)
 public class Deleting {
     
-    var managedContext : NSManagedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
+    var managedContext : NSManagedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
     
     init(context: NSManagedObjectContext) {
         self.managedContext = context
     }
     
-    @available(iOS 9.0, *)
-    public func batch(entityName : String){
-        let fetchRequest = NSFetchRequest(entityName: entityName)
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+    public func batch(entity : AnyClass){
+        let request: NSFetchRequest<NSFetchRequestResult> = entity.fetchRequest()
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: request)
         
         do {
-            try managedContext.executeRequest(deleteRequest)
+            try managedContext.execute(deleteRequest)
         } catch let error as NSError {
             print("Could not delete \(error), \(error.userInfo)")
         }
     }
     
     public func one(entity: NSManagedObject){
-        self.managedContext.deleteObject(entity)
+        self.managedContext.delete(entity)
     }
     
     public func many(objects: [NSManagedObject]){
         for object in objects {
-            self.managedContext.deleteObject(object)
+            self.managedContext.delete(object)
         }
     }
     

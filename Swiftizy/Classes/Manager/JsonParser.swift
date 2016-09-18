@@ -10,6 +10,7 @@ import Foundation
 import CoreData
 
 
+@available(iOS 10.0, *)
 public class JsonParser {
     
     
@@ -21,12 +22,12 @@ public class JsonParser {
      */
     
     public static func jsonToManagedObject(dic: NSDictionary, createElseReturn entity: AnyClass, ignoreAttributes: [String]?) -> NSManagedObject {
-        return self.consumeJsonAndCreateEntityInCoreData(dic, anyClass: entity, batchDescription: .CreateElseReturn, ignoreAttributes: ignoreAttributes)
+        return self.consumeJsonAndCreateEntityInCoreData(dic: dic, anyClass: entity, batchDescription: .CreateElseReturn, ignoreAttributes: ignoreAttributes)
         
     }
     
     public static func jsonToManagedObject(dic: NSDictionary, createElseUpdate entity: AnyClass, ignoreAttributes: [String]?) -> NSManagedObject {
-        return self.consumeJsonAndCreateEntityInCoreData(dic, anyClass: entity, batchDescription: .CreateElseUpdate, ignoreAttributes: ignoreAttributes)
+        return self.consumeJsonAndCreateEntityInCoreData(dic: dic, anyClass: entity, batchDescription: .CreateElseUpdate, ignoreAttributes: ignoreAttributes)
         
     }
     
@@ -40,11 +41,11 @@ public class JsonParser {
         // 1. Get entity and init dynamicly the object
         let entityName = NSStringFromClass(anyClass).pathExtension
         print(NSStringFromClass(anyClass).pathExtension)
-        let entity = NSEntityDescription.entityForName(entityName, inManagedObjectContext: CoreDataManager.managedContext)
+        let entity = NSEntityDescription.entity(forEntityName: entityName, in: CoreDataManager.managedContext)
         
         let clz: NSManagedObject.Type = anyClass as! NSManagedObject.Type
         let object = clz.init(entity: entity!,
-                              insertIntoManagedObjectContext: CoreDataManager.managedContext)
+                              insertInto: CoreDataManager.managedContext)
         
         // 2. Reflect the object to get name of each property
         var propertyCount : UInt32 = 0
@@ -52,13 +53,13 @@ public class JsonParser {
         var propertiesName : [String] = [String]()
         
         for i in 0 ..< Int(propertyCount) {
-            let property = properties[i]
-            propertiesName.append(String(UTF8String: property_getName(property))!)
+            let property = properties?[i]
+            let name = String.init(cString: property_getName(property!))
+            propertiesName.append(name)
         }
         
         // 3. Treatment of all properties, add values from the Dictionary (JSON)
         for name in propertiesName {
-            
             // Need to ignore ?
             if ignoreAttributes != nil && (ignoreAttributes?.contains(name))! {
                 object.setValue(nil, forKey: name)
@@ -66,43 +67,43 @@ public class JsonParser {
                 // If not ignore so continue
             } else {
                 // It's a PK ? If No:
-                if !InternalToolsForParser.attributeIsPK(name) {
+                if !InternalToolsForParser.attributeIsPK(name: name) {
                     if let _ = dic[name] {
                         // If property is a relationShip to other entity
                         if let descr = entity!.propertiesByName[name] as? NSRelationshipDescription {
                             // If yes, check if TO-ONE
-                            if !descr.toMany {
+                            if !descr.isToMany {
                                 let nameDest = descr.destinationEntity?.name!
-                                let className = "\(NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String).\(nameDest!)"
+                                let className = "\(Bundle.main.infoDictionary!["CFBundleName"] as! String).\(nameDest!)"
                                 let anyClass : NSManagedObject.Type = NSClassFromString(className) as! NSManagedObject.Type
-                                if !InternalToolsForParser.propertyIsNil(name, dic: dic) {
-                                    object.setValue(self.consumeJsonAndCreateEntityInCoreData((dic[name] as! NSDictionary), anyClass: anyClass, batchDescription: batchDescription, ignoreAttributes: ignoreAttributes), forKey: name)
+                                if !InternalToolsForParser.propertyIsNil(name: name, dic: dic) {
+                                    object.setValue(self.consumeJsonAndCreateEntityInCoreData(dic: (dic[name] as! NSDictionary), anyClass: anyClass, batchDescription: batchDescription, ignoreAttributes: ignoreAttributes), forKey: name)
                                 }
                                 // Else, if TO-MANY
                             } else {
                                 let arrayOfDic = dic[name] as! [NSDictionary]
                                 let nameDest = descr.destinationEntity?.name!
-                                let className = "\(NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String).\(nameDest!)"
+                                let className = "\(Bundle.main.infoDictionary!["CFBundleName"] as! String).\(nameDest!)"
                                 let anyClass : NSManagedObject.Type = NSClassFromString(className) as! NSManagedObject.Type
                                 let set = NSMutableSet()
                                 for arrayItem in arrayOfDic {
-                                    let descrObject = self.consumeJsonAndCreateEntityInCoreData((arrayItem), anyClass: anyClass, batchDescription: batchDescription, ignoreAttributes: ignoreAttributes)
-                                    set.addObject(descrObject)
+                                    let descrObject = self.consumeJsonAndCreateEntityInCoreData(dic: (arrayItem), anyClass: anyClass, batchDescription: batchDescription, ignoreAttributes: ignoreAttributes)
+                                    set.add(descrObject)
                                 }
                                 object.setValue((set as NSSet), forKey: name)
                             }
                             
                             // If is primitive value
                         } else {
-                            if !InternalToolsForParser.propertyIsNil(name, dic: dic){
+                            if !InternalToolsForParser.propertyIsNil(name: name, dic: dic){
                                 if let array = dic[name]! as? NSArray {
                                     var string = ""
                                     var index = 1
                                     for item in array {
                                         if index == array.count{
-                                            string += item.description
+                                            string += (item as AnyObject).description
                                         } else {
-                                            string += item.description + ","
+                                            string += (item as AnyObject).description + ","
                                         }
                                         index += 1
                                     }
@@ -116,7 +117,7 @@ public class JsonParser {
                     
                     // If Yes It's a PK:
                 } else {
-                    let attributeName = InternalToolsForParser.getPkAttributeName(name)
+                    let attributeName = InternalToolsForParser.getPkAttributeName(name: name)
                     var predicate = NSPredicate()
                     if let number = dic[attributeName]! as? NSNumber {
                         predicate = NSPredicate(format: "\(name) = %@", number)
@@ -126,15 +127,15 @@ public class JsonParser {
                         predicate = NSPredicate(format: "\(name) = %@", string)
                     }
                     
-                    let fetchRequest = NSFetchRequest(entityName: entityName)
+                    let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: entityName)//NSClassFromString(entityName)!.fetchRequest()
                     fetchRequest.predicate = predicate
                     if  batchDescription == .CreateElseReturn || batchDescription == nil{
                         do {
-                            let results = try CoreDataManager.managedContext.executeFetchRequest(fetchRequest)
+                            let results = try CoreDataManager.managedContext.fetch(fetchRequest)
                             if results.count == 0 {
                                 object.setValue(dic[attributeName]!, forKey: name)
                             } else {
-                                CoreDataManager.managedContext.deleteObject(object)
+                                CoreDataManager.managedContext.delete(object)
                                 return results[0] as! NSManagedObject
                             }
                         } catch {
@@ -142,13 +143,13 @@ public class JsonParser {
                         }
                     } else if batchDescription == .CreateElseUpdate {
                         do {
-                            var results = try CoreDataManager.managedContext.executeFetchRequest(fetchRequest)
+                            var results = try CoreDataManager.managedContext.fetch(fetchRequest)
                             if results.count == 0 {
                                 object.setValue(dic[attributeName]!, forKey: name)
                             } else {
-                                CoreDataManager.managedContext.deleteObject(object)
-                                results[0].setValue(dic[attributeName], forKey: name)
-                                self.updateObject(results[0] as! NSManagedObject, entity: entity!, propertiesName: propertiesName, dic: dic, batchDescription: batchDescription, ignoreAttributes: ignoreAttributes)
+                                CoreDataManager.managedContext.delete(object)
+                                (results[0] as AnyObject).setValue(dic[attributeName], forKey: name)
+                                self.updateObject(object: results[0] as! NSManagedObject, entity: entity!, propertiesName: propertiesName, dic: dic, batchDescription: batchDescription, ignoreAttributes: ignoreAttributes)
                                 return results[0] as! NSManagedObject
                             }
                         } catch {
@@ -162,7 +163,7 @@ public class JsonParser {
         return object
     }
     
-    static func updateObject(var object: NSManagedObject, entity: NSEntityDescription, propertiesName: [String], dic: NSDictionary, batchDescription: JsonRelationshipDescriptionType?, ignoreAttributes: [String]?) {
+    static func updateObject(object: NSManagedObject, entity: NSEntityDescription, propertiesName: [String], dic: NSDictionary, batchDescription: JsonRelationshipDescriptionType?, ignoreAttributes: [String]?) {
         for name in propertiesName {
             // Need to ignore ?
             if ignoreAttributes != nil && (ignoreAttributes?.contains(name))! {
@@ -171,43 +172,43 @@ public class JsonParser {
                 // If not ignore so continue
             } else {
                 // It's a PK ? If No:
-                if !InternalToolsForParser.attributeIsPK(name) {
+                if !InternalToolsForParser.attributeIsPK(name: name) {
                     if let _ = dic[name] {
                         // If property is a relationShip to other entity
                         if let descr = entity.propertiesByName[name] as? NSRelationshipDescription {
                             // If yes, check if TO-ONE
-                            if !descr.toMany {
+                            if !descr.isToMany {
                                 let nameDest = descr.destinationEntity?.name!
-                                let className = "\(NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String).\(nameDest!)"
+                                let className = "\(Bundle.main.infoDictionary!["CFBundleName"] as! String).\(nameDest!)"
                                 let anyClass : NSManagedObject.Type = NSClassFromString(className) as! NSManagedObject.Type
-                                if !InternalToolsForParser.propertyIsNil(name, dic: dic) {
-                                    object.setValue(self.consumeJsonAndCreateEntityInCoreData((dic[name] as! NSDictionary), anyClass: anyClass, batchDescription: batchDescription, ignoreAttributes: ignoreAttributes), forKey: name)
+                                if !InternalToolsForParser.propertyIsNil(name: name, dic: dic) {
+                                    object.setValue(self.consumeJsonAndCreateEntityInCoreData(dic: (dic[name] as! NSDictionary), anyClass: anyClass, batchDescription: batchDescription, ignoreAttributes: ignoreAttributes), forKey: name)
                                 }
                                 // Else, if TO-MANY
                             } else {
                                 let arrayOfDic = dic[name] as! [NSDictionary]
                                 let nameDest = descr.destinationEntity?.name!
-                                let className = "\(NSBundle.mainBundle().infoDictionary!["CFBundleName"] as! String).\(nameDest!)"
+                                let className = "\(Bundle.main.infoDictionary!["CFBundleName"] as! String).\(nameDest!)"
                                 let anyClass : NSManagedObject.Type = NSClassFromString(className) as! NSManagedObject.Type
                                 let set = NSMutableSet()
                                 for arrayItem in arrayOfDic {
-                                    let descrObject = self.consumeJsonAndCreateEntityInCoreData((arrayItem), anyClass: anyClass, batchDescription: batchDescription, ignoreAttributes: ignoreAttributes)
-                                    set.addObject(descrObject)
+                                    let descrObject = self.consumeJsonAndCreateEntityInCoreData(dic: (arrayItem), anyClass: anyClass, batchDescription: batchDescription, ignoreAttributes: ignoreAttributes)
+                                    set.add(descrObject)
                                 }
                                 object.setValue((set as NSSet), forKey: name)
                             }
                             
                             // If is primitive value
                         } else {
-                            if !InternalToolsForParser.propertyIsNil(name, dic: dic){
+                            if !InternalToolsForParser.propertyIsNil(name: name, dic: dic){
                                 if let array = dic[name]! as? NSArray {
                                     var string = ""
                                     var index = 1
                                     for item in array {
                                         if index == array.count{
-                                            string += item.description
+                                            string += (item as AnyObject).description
                                         } else {
-                                            string += item.description + ","
+                                            string += (item as AnyObject).description + ","
                                         }
                                         index += 1
                                     }

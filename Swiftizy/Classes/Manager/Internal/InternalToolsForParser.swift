@@ -8,10 +8,11 @@
 
 import Foundation
 
+@available(iOS 9.0, *)
 public class InternalToolsForParser {
     
     static func attributeIsPK(name: String) -> Bool {
-        if name.subStr(0, length: 2) == "pk" {
+        if name.contains("pk") {
             return true
         } else {
             return false
@@ -19,7 +20,9 @@ public class InternalToolsForParser {
     }
     
     static func getPkAttributeName(name: String) -> String {
-        return name.subStr(3, length: (name.length - 3))
+        var index = name.index(name.startIndex, offsetBy: 3)
+        return name.substring(from: index)
+        //return name.subStr(startIndex: 3, length: (name.length - 3))
     }
     
     static func propertyIsNil(name: String, dic: NSDictionary) -> Bool {

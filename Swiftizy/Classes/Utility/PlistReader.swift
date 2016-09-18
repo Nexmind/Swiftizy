@@ -14,7 +14,7 @@ public class PlistReader {
     var hmDict : NSDictionary?
     
     public init(plistFileName : String){
-        if let path = NSBundle.mainBundle().pathForResource(plistFileName, ofType: "plist")
+        if let path = Bundle.main.path(forResource: plistFileName, ofType: "plist")
         {
             hmDict = NSDictionary(contentsOfFile: path)
         }

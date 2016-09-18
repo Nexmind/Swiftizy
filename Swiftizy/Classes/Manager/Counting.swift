@@ -9,40 +9,43 @@
 import Foundation
 import CoreData
 
+@available(iOS 10.0, *)
 public class Counting {
-
-    var managedContext : NSManagedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
+    
+    var managedContext : NSManagedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
     
     init(context: NSManagedObjectContext) {
         self.managedContext = context
     }
     
-    public func all(entityName: String) -> Int {
-        let request: NSFetchRequest = NSFetchRequest()
-        let description = NSEntityDescription.entityForName(entityName, inManagedObjectContext: self.managedContext)
-        request.entity = description
+    public func all(entity: AnyClass) -> Int {
+        let request: NSFetchRequest<NSFetchRequestResult> = entity.fetchRequest()
         request.includesSubentities = false
-        
-        let err: NSErrorPointer = nil;
-        let count: Int = self.managedContext.countForFetchRequest(request, error: err)
-        if(count == NSNotFound) {
+        do {
+            let count: Int = try self.managedContext.count(for: request)
+            if(count == NSNotFound) {
+                return 0
+            }
+            return count
+        } catch {
             return 0
         }
-        return count
+        
     }
     
-    public func custom(entityName: String, predicate: NSPredicate) -> Int{
-        let request: NSFetchRequest = NSFetchRequest()
-        let description = NSEntityDescription.entityForName(entityName, inManagedObjectContext: self.managedContext)
-        request.entity = description
+    public func custom(entity: AnyClass, predicate: NSPredicate) -> Int{
+        let request: NSFetchRequest<NSFetchRequestResult> = entity.fetchRequest()
         request.predicate = predicate
         request.includesSubentities = false
         
-        let err: NSErrorPointer = nil;
-        let count: Int = self.managedContext.countForFetchRequest(request, error: err)
-        if(count == NSNotFound) {
+        do {
+            let count: Int = try self.managedContext.count(for: request)
+            if(count == NSNotFound) {
+                return 0
+            }
+            return count
+        } catch {
             return 0
         }
-        return count
     }
 }

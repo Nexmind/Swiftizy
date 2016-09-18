@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cCE-Gn-VTY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cCE-Gn-VTY">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,106 +15,99 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Swiftizy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7RS-9b-O0B">
-                                <rect key="frame" x="175" y="72" width="251" height="65"/>
-                                <color key="backgroundColor" red="0.42352941179999998" green="0.56078431370000004" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swiftizy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7RS-9b-O0B">
+                                <color key="backgroundColor" red="0.42352941179999998" green="0.56078431370000004" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="BPD-Sh-KeL"/>
                                     <constraint firstAttribute="width" constant="251" id="USx-o3-mcK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
-                                <color key="textColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6a7-zh-3vf">
-                                <rect key="frame" x="155" y="153" width="291" height="42"/>
-                                <color key="backgroundColor" red="0.39607843139999999" green="0.57647058819999997" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6a7-zh-3vf">
+                                <color key="backgroundColor" red="0.39607843139999999" green="0.57647058819999997" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="IhS-hx-dbB"/>
                                     <constraint firstAttribute="width" constant="291" id="sA6-Ax-xka"/>
                                 </constraints>
                                 <state key="normal" title="1. Get books (CreateElseReturn)">
-                                    <color key="titleColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="loadBooksInCoreData:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vhU-G4-gvh"/>
+                                    <action selector="loadBooksInCoreDataWithSender:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oXc-C9-1CD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTO-t1-13E">
-                                <rect key="frame" x="155" y="216" width="291" height="42"/>
-                                <color key="backgroundColor" red="0.39607843139999999" green="0.57647058819999997" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTO-t1-13E">
+                                <color key="backgroundColor" red="0.39607843139999999" green="0.57647058819999997" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="291" id="KzN-ZJ-4QA"/>
                                     <constraint firstAttribute="height" constant="42" id="lqj-Xk-sSE"/>
                                 </constraints>
                                 <state key="normal" title="2. Verify if books are in CoreData">
-                                    <color key="titleColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="verifyIfBooksAreInCoreData:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wFs-iY-3n9"/>
+                                    <action selector="verifyIfBooksAreInCoreDataWithSender:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BVW-qa-1Qu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03f-k7-1mf">
-                                <rect key="frame" x="155" y="398" width="291" height="42"/>
-                                <color key="backgroundColor" red="0.39607843139999999" green="0.57647058819999997" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03f-k7-1mf">
+                                <color key="backgroundColor" red="0.39607843139999999" green="0.57647058819999997" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="00Z-Cw-L2x"/>
                                     <constraint firstAttribute="width" constant="291" id="6md-E4-nLL"/>
                                 </constraints>
                                 <state key="normal" title="5. Get books (CreateElseUpdate)">
-                                    <color key="titleColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="getBookCreateElseUpdate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ih1-hp-Au2"/>
+                                    <action selector="getBookCreateElseUpdateWithSender:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8r3-BL-ita"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pD8-mC-sff">
-                                <rect key="frame" x="155" y="276" width="291" height="42"/>
-                                <color key="backgroundColor" red="0.39607843139999999" green="0.57647058819999997" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pD8-mC-sff">
+                                <color key="backgroundColor" red="0.39607843139999999" green="0.57647058819999997" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="mpo-qo-uaX"/>
                                     <constraint firstAttribute="width" constant="291" id="zbL-Qt-cPP"/>
                                 </constraints>
                                 <state key="normal" title="3. Visualize in TableView">
-                                    <color key="titleColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="F6N-bY-wzi" kind="show" id="G0M-9O-sZN"/>
+                                    <segue destination="F6N-bY-wzi" kind="show" id="QqF-7O-36Q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cix-DQ-HQ6">
-                                <rect key="frame" x="155" y="337" width="291" height="42"/>
-                                <color key="backgroundColor" red="0.39607843139999999" green="0.57647058819999997" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cix-DQ-HQ6">
+                                <color key="backgroundColor" red="0.39607843139999999" green="0.57647058819999997" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="Nb8-x1-nhN"/>
                                     <constraint firstAttribute="width" constant="291" id="kZG-h1-xSs"/>
                                 </constraints>
                                 <state key="normal" title="4. Modify number of pages for books">
-                                    <color key="titleColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="modifyBooksValue:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EY7-Oe-IZj"/>
+                                    <action selector="modifyBooksValueWithSender:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QvE-ZU-6Hn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rG8-Eo-fb7">
-                                <rect key="frame" x="155" y="462" width="291" height="42"/>
-                                <color key="backgroundColor" red="0.85043728351593018" green="0.21816034615039825" blue="0.15920260548591614" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rG8-Eo-fb7">
+                                <color key="backgroundColor" red="0.85043728351593018" green="0.21816034615039825" blue="0.15920260548591614" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="291" id="7A9-pn-a6X"/>
                                     <constraint firstAttribute="height" constant="42" id="lZ5-4p-VuF"/>
                                 </constraints>
                                 <state key="normal" title="Delete books ">
-                                    <color key="titleColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="deleteBooks:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="j4A-eP-i6h"/>
+                                    <action selector="deleteBooksWithSender:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xp1-ff-GmS"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6a7-zh-3vf" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="34X-Bd-LJn"/>
                             <constraint firstItem="03f-k7-1mf" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="5kj-Ce-vg6"/>
@@ -142,15 +136,15 @@
             <objects>
                 <tableViewController id="F6N-bY-wzi" customClass="TableViewController" customModule="Swiftizy_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="MGx-Ph-2Yu">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="7P1-pU-f91">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7P1-pU-f91" id="VeV-Jf-Y6M">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <frame key="frameInset" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -173,9 +167,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fTV-cW-Pv4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.42352941179999998" green="0.56078431370000004" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.42352941179999998" green="0.56078431370000004" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.42352941179999998" green="0.56078431370000004" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.96628517069999997" green="0.96628517069999997" blue="0.96628517069999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.42352941179999998" green="0.56078431370000004" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

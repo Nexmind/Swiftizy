@@ -1,2224 +1,911 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>01CF63E7082B07F48F436EA06A701582</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>DDE551108DEBC01F9C82813E5EC139E0</string>
-				<string>9F4E32199461BD9FD816D2820CC42E37</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>029F740DBFA1703B1CDF291D8EC8F2D4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>09946D51AFA0C8AC8FEAE989C151D285</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Development Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>02D52EE1BA048D73B62D77DEC43C987E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>50A4BDBFC47F6911676B211CC98A52F4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>048740E33BAAD6878D2BA9326012142D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DateExtension.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>05E5B642B2A90652CAE3C79DE70AD5E7</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C87E37FD1EA88F5E940CCAB49F5CADEA</string>
-				<string>93F4DA8F7BF8F828B1C487D5559CD9B8</string>
-				<string>0859690D7228D8A2A4A19DB0E1D1C54F</string>
-				<string>C28E640BBBB77964E15292D71794ECF9</string>
-				<string>8654430C0124E7B2D1F3873EDEB9172D</string>
-				<string>7BBCE8BBCD0993FFC6E1C80CEF918E08</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>Example/Pods/Target Support Files/Swiftizy</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>07A8C0027524260C454C8A7B02F4295C</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>DE4FE35F9A890E8463F5F6EDD87100E2</string>
-				<string>FB80B2EEECCD7E333D37825F4F463398</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>0859690D7228D8A2A4A19DB0E1D1C54F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Swiftizy.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>09946D51AFA0C8AC8FEAE989C151D285</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>05E5B642B2A90652CAE3C79DE70AD5E7</string>
-				<string>8F2BDE993EB2880B3E4455074628F51E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Swiftizy</string>
-			<key>path</key>
-			<string>../..</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0AB977A7E779882715BCE06B3BFDB247</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-Swiftizy_Tests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0DBB1BA07113123CB2D75DDAF483DDB5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Counting.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0F10B94236D8C77FE0879355A3B4A5BE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-Swiftizy_Tests-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0F665B5763A138E5FDC824B4037C0EA0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4B3B891A6BCC93F655C80630CDB72CA1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>10DE1947DAC0ED28F6C0A9F9BD75D546</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>RELEASE=1</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>12FFFB3C57ACE20BCED0D10E242B4A2C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3E4E89230EF59BC255123B67864ACF77</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>18401D53AC895D10D902A77F7783402B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EF2035E65034564D9091CD2EAFD86713</string>
-				<string>580B42FF387A8AF9A943FF786748DF82</string>
-				<string>8BD73E17FADB28A40AD50282BBDAE101</string>
-				<string>72ACFB0F80E54745E6D80097DA2118C9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Classes</string>
-			<key>path</key>
-			<string>Classes</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1B125D40446DB277A7EA1699EDFEA056</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>69BA19BD3981A93B91EC40589B5E9740</string>
-			<key>remoteInfo</key>
-			<string>Swiftizy</string>
-		</dict>
-		<key>1C74B5363A27300058BB63CC76F544DA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FBEB7764A4E1E7567054CF300EAC293D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1CCE7570E547E47C220D56BC5F082908</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods-Swiftizy_Example.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1FED6B519C9C1760E588415D60186B04</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>21AC3B9A7A29B79223A50FE3487E16FB</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>0AB977A7E779882715BCE06B3BFDB247</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-Swiftizy_Tests/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-Swiftizy_Tests/Pods-Swiftizy_Tests.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_Swiftizy_Tests</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>2512FEE14CCA0952C5374413F36884F6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-Swiftizy_Example-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2517C1A06EA98B3698722C071C87ADC6</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C75285B00FC9DBD7E1CA93E6101E88CE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>25A93CDFF39C933AD79C8102FA7BBA01</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6DF17015BE953E98B80F03D3F9B76E4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>29E536C27A3269B610BBDA65BFC7BFB1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Creating.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>29E7E551AB664FDEB4E8400E2B11B298</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FF2238346AB5CC4F26A5200B064F3EF4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2D0009160976D55A927FDCBC423DA895</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>0859690D7228D8A2A4A19DB0E1D1C54F</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Swiftizy/Swiftizy-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Swiftizy/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Swiftizy/Swiftizy.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>PRODUCT_NAME</key>
-				<string>Swiftizy</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>552D02D5BA751AC2E8790D2811D496CA</string>
-				<string>10DE1947DAC0ED28F6C0A9F9BD75D546</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>2E2AE160F3151FE379FD3B0027CFA5F9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-Swiftizy_Example.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3090032A8A279816EA284B88A504E34C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>CoreDataManager.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>31F5BE83FBF13F7331FE05F7C4AE2292</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A5796E20BA7977960A315A47F6033386</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>34167EDFDBEF7CCC21B8D7FEF1CFE651</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>29E7E551AB664FDEB4E8400E2B11B298</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>34E3EAB298B36B4D526F7A1DD23BF1DA</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>FCA655CAC728B9992A31430F3D37255D</string>
-				<string>CADB298338C56A9A27A65D68FCD68D59</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>37EB7EC43F64EA27B34B3C3A76A6384E</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods_Swiftizy_Tests.framework</string>
-			<key>path</key>
-			<string>Pods_Swiftizy_Tests.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>3A7C70D27C2B05C355E9EC45BE174031</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-Swiftizy_Tests-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3D67782650F3E8A063812222D75152E5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BBDA94CFDA4D6840968656B8D828E086</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>3E269B665773D0E55E293517B9A59410</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-Swiftizy_Example-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3E4E89230EF59BC255123B67864ACF77</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>417381C82A045CC332BB2DAE74D24444</key>
-		<dict>
-			<key>fileRef</key>
-			<string>55D3221593CE16F031CF07A701767693</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>42C81BF484189EBEDBDA64AB813294DE</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Swiftizy-Swiftizy</string>
-			<key>target</key>
-			<string>B51A0D2FC0AE4C6F90D0260F7A970D61</string>
-			<key>targetProxy</key>
-			<string>8B6BF56DC9818EA58D4E4ADFFD4A6D1A</string>
-		</dict>
-		<key>42EC659E7D118D8AEC38114456A52A4F</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Swiftizy.bundle</string>
-			<key>path</key>
-			<string>Swiftizy.bundle</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>4A2A28E4E74F6E0604B822E3E9AF0066</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3E4E89230EF59BC255123B67864ACF77</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4B3B891A6BCC93F655C80630CDB72CA1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>42EC659E7D118D8AEC38114456A52A4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4B3C602822DEF75691B45A7511F37B8D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7BBCE8BBCD0993FFC6E1C80CEF918E08</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>4FE296BAAE164EB00C7354F814E83488</key>
-		<dict>
-			<key>fileRef</key>
-			<string>29E536C27A3269B610BBDA65BFC7BFB1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4FF1C5FBB5137760A212D42D75C55F71</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3E4E89230EF59BC255123B67864ACF77</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>50A4BDBFC47F6911676B211CC98A52F4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Fetching.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5142AD1A1B5E61880ED623A2EED329A3</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>78F66859784DC7BDA34C12FCB8B6F365</string>
-				<string>2D0009160976D55A927FDCBC423DA895</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>51E76C366377B584546E5EE09DBD3B36</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B60E9F0AE34F3A31400D0FE5BE71C3B5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>52115E7AF4375EFD8BC13A1738588B8C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>JsonParser.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5245464A22FFD5E0C4B0B2D1D5A44A9E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-Swiftizy_Tests-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>52B4D32965A37C34F6D833AAD8B4A4E1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3E269B665773D0E55E293517B9A59410</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>534248C3091DFBCA07A877D1F1F408D0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3090032A8A279816EA284B88A504E34C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>552D02D5BA751AC2E8790D2811D496CA</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>55D3221593CE16F031CF07A701767693</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Deleting.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>577E09679BE0DD9C5873FAC0439B1397</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>EF4E7AE007D38DFAEE4BEB35F21029AF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>580B42FF387A8AF9A943FF786748DF82</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>DDEC098A118D345D75D4B9949B74A12F</string>
-				<string>AFBD53DF19236AF18BA25B8BE6A247E7</string>
-				<string>048740E33BAAD6878D2BA9326012142D</string>
-				<string>E5520EE9B17A01F69870109CDB67AE67</string>
-				<string>C75285B00FC9DBD7E1CA93E6101E88CE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Extension</string>
-			<key>path</key>
-			<string>Extension</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>595712BC8B38B5FD34F6CC1CCDA55370</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>8440387E9704F62D25396BD04D1E388B</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-Swiftizy_Tests/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-Swiftizy_Tests/Pods-Swiftizy_Tests.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_Swiftizy_Tests</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5DD82538B87F1B26F9C75219B1967DA2</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>5E5A3BD0F96D52A7D83014F79219BDDC</string>
-			<key>buildPhases</key>
-			<array>
-				<string>577E09679BE0DD9C5873FAC0439B1397</string>
-				<string>8D8D9397CB8BC345888BA524FBF32216</string>
-				<string>B5D911F2395C473C0F84D8A45729EC19</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>E1691E57D8B150C8AFE3C02EF2648564</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-Swiftizy_Tests</string>
-			<key>productName</key>
-			<string>Pods-Swiftizy_Tests</string>
-			<key>productReference</key>
-			<string>37EB7EC43F64EA27B34B3C3A76A6384E</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>5E5A3BD0F96D52A7D83014F79219BDDC</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>595712BC8B38B5FD34F6CC1CCDA55370</string>
-				<string>21AC3B9A7A29B79223A50FE3487E16FB</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>6291833B5C542B5CC66C750B115DE9EB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>675B5DFC663F5A62648508F712139BC2</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Swiftizy.framework</string>
-			<key>path</key>
-			<string>Swiftizy.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>69BA19BD3981A93B91EC40589B5E9740</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>5142AD1A1B5E61880ED623A2EED329A3</string>
-			<key>buildPhases</key>
-			<array>
-				<string>7A04CC27D0D01A7BCC43C7983DED2BB9</string>
-				<string>D911D86CBB0054380544153DB908328E</string>
-				<string>0F665B5763A138E5FDC824B4037C0EA0</string>
-				<string>AD8D0C808B73D1EEF1FD26FB2086B714</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>42C81BF484189EBEDBDA64AB813294DE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Swiftizy</string>
-			<key>productName</key>
-			<string>Swiftizy</string>
-			<key>productReference</key>
-			<string>675B5DFC663F5A62648508F712139BC2</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>6DF17015BE953E98B80F03D3F9B76E4F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>RestManager.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>713C82C30FEA7B72C3FF1E1BF9EF4219</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>StreamReader.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>72ACFB0F80E54745E6D80097DA2118C9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A5796E20BA7977960A315A47F6033386</string>
-				<string>713C82C30FEA7B72C3FF1E1BF9EF4219</string>
-				<string>FBEB7764A4E1E7567054CF300EAC293D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Utility</string>
-			<key>path</key>
-			<string>Utility</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>769318708DD48D0E53B4E8F650CED733</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>07A8C0027524260C454C8A7B02F4295C</string>
-			<key>buildPhases</key>
-			<array>
-				<string>34167EDFDBEF7CCC21B8D7FEF1CFE651</string>
-				<string>D1FD52DCC635FEB2D33BCA7BE078E11A</string>
-				<string>904FC834FC6F9351FABA4B2D8B529BE7</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>C5731C5171A1C8D9EB6577723C909944</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-Swiftizy_Example</string>
-			<key>productName</key>
-			<string>Pods-Swiftizy_Example</string>
-			<key>productReference</key>
-			<string>B3A1856B5B345E4B652D203A7D4E6ECD</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>78DD840FA5CC9B081F21402A76B63AF1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>048740E33BAAD6878D2BA9326012142D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>78F66859784DC7BDA34C12FCB8B6F365</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>0859690D7228D8A2A4A19DB0E1D1C54F</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/Swiftizy/Swiftizy-prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Swiftizy/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Swiftizy/Swiftizy.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>Swiftizy</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7A04CC27D0D01A7BCC43C7983DED2BB9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>9C9746D32BA16F993637D73AFE5BBBD4</string>
-				<string>C2C183EA4E3A9532EC4B3A25F8CCB0CB</string>
-				<string>534248C3091DFBCA07A877D1F1F408D0</string>
-				<string>CACFDC0866DAC4A12EB672C5419D7D94</string>
-				<string>4FE296BAAE164EB00C7354F814E83488</string>
-				<string>78DD840FA5CC9B081F21402A76B63AF1</string>
-				<string>417381C82A045CC332BB2DAE74D24444</string>
-				<string>02D52EE1BA048D73B62D77DEC43C987E</string>
-				<string>51E76C366377B584546E5EE09DBD3B36</string>
-				<string>A279791680E9B4F59D2C289CD444A549</string>
-				<string>AB0D5F5496015F8F4D517A5B7CC00449</string>
-				<string>BEE090B993C8C8F18DC561591B2A0BFD</string>
-				<string>968E031851C2686EADBCC2D9ABD77F8F</string>
-				<string>31F5BE83FBF13F7331FE05F7C4AE2292</string>
-				<string>25A93CDFF39C933AD79C8102FA7BBA01</string>
-				<string>9708CEB97A30AB2DEA8E31B818FA63D9</string>
-				<string>81C6C1AEDB570E6643B415A8C7198078</string>
-				<string>FAC2B3A08D6AEB4FD278213E00DBDDAF</string>
-				<string>1C74B5363A27300058BB63CC76F544DA</string>
-				<string>2517C1A06EA98B3698722C071C87ADC6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7BBCE8BBCD0993FFC6E1C80CEF918E08</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Swiftizy-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7DB346D0F39D3F0E887471402A8071AB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
-				<string>029F740DBFA1703B1CDF291D8EC8F2D4</string>
-				<string>BC3CA7F9E30CC8F7E2DD044DD34432FC</string>
-				<string>AC5183593BB5CCD223E9FE547256033A</string>
-				<string>01CF63E7082B07F48F436EA06A701582</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>81C6C1AEDB570E6643B415A8C7198078</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E5520EE9B17A01F69870109CDB67AE67</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8440387E9704F62D25396BD04D1E388B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-Swiftizy_Tests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>84BCCF6E2DBDC3832F2EECE15EA976AC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods-Swiftizy_Tests.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8654430C0124E7B2D1F3873EDEB9172D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Swiftizy-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8B6BF56DC9818EA58D4E4ADFFD4A6D1A</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>B51A0D2FC0AE4C6F90D0260F7A970D61</string>
-			<key>remoteInfo</key>
-			<string>Swiftizy-Swiftizy</string>
-		</dict>
-		<key>8BD73E17FADB28A40AD50282BBDAE101</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3090032A8A279816EA284B88A504E34C</string>
-				<string>0DBB1BA07113123CB2D75DDAF483DDB5</string>
-				<string>29E536C27A3269B610BBDA65BFC7BFB1</string>
-				<string>55D3221593CE16F031CF07A701767693</string>
-				<string>50A4BDBFC47F6911676B211CC98A52F4</string>
-				<string>52115E7AF4375EFD8BC13A1738588B8C</string>
-				<string>F27716377A614AA3FB57C6641E3797D1</string>
-				<string>6DF17015BE953E98B80F03D3F9B76E4F</string>
-				<string>AEBAEC53CE57655B4D42BD5AF24AAFD4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Manager</string>
-			<key>path</key>
-			<string>Manager</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D8D9397CB8BC345888BA524FBF32216</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4FF1C5FBB5137760A212D42D75C55F71</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8F2BDE993EB2880B3E4455074628F51E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>18401D53AC895D10D902A77F7783402B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Swiftizy</string>
-			<key>path</key>
-			<string>Swiftizy</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>904FC834FC6F9351FABA4B2D8B529BE7</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>52B4D32965A37C34F6D833AAD8B4A4E1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>93F4DA8F7BF8F828B1C487D5559CD9B8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Swiftizy.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>968E031851C2686EADBCC2D9ABD77F8F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F27716377A614AA3FB57C6641E3797D1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9708CEB97A30AB2DEA8E31B818FA63D9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>713C82C30FEA7B72C3FF1E1BF9EF4219</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9C9746D32BA16F993637D73AFE5BBBD4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DDEC098A118D345D75D4B9949B74A12F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9EED802265105D5A05720BD496A81073</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>NexosError.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9F4E32199461BD9FD816D2820CC42E37</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1FED6B519C9C1760E588415D60186B04</string>
-				<string>84BCCF6E2DBDC3832F2EECE15EA976AC</string>
-				<string>5245464A22FFD5E0C4B0B2D1D5A44A9E</string>
-				<string>B46E4F1A771FF9240E6FFB1B07C895D6</string>
-				<string>0F10B94236D8C77FE0879355A3B4A5BE</string>
-				<string>C0D4D865D0F522995A36FF43E75D1138</string>
-				<string>3A7C70D27C2B05C355E9EC45BE174031</string>
-				<string>BBDA94CFDA4D6840968656B8D828E086</string>
-				<string>8440387E9704F62D25396BD04D1E388B</string>
-				<string>0AB977A7E779882715BCE06B3BFDB247</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-Swiftizy_Tests</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-Swiftizy_Tests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A1A2DEF2A89CAFF20AFB88AD7106E4EE</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>69BA19BD3981A93B91EC40589B5E9740</string>
-			<key>remoteInfo</key>
-			<string>Swiftizy</string>
-		</dict>
-		<key>A1F9B7E6C01BC6FB8BB6B3F971FCB4A5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-Swiftizy_Example-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A279791680E9B4F59D2C289CD444A549</key>
-		<dict>
-			<key>fileRef</key>
-			<string>52115E7AF4375EFD8BC13A1738588B8C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A5796E20BA7977960A315A47F6033386</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PlistReader.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AB0D5F5496015F8F4D517A5B7CC00449</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D84817ADD771D00B5B3A240710B37660</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>AC5183593BB5CCD223E9FE547256033A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B3A1856B5B345E4B652D203A7D4E6ECD</string>
-				<string>37EB7EC43F64EA27B34B3C3A76A6384E</string>
-				<string>42EC659E7D118D8AEC38114456A52A4F</string>
-				<string>675B5DFC663F5A62648508F712139BC2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AD8D0C808B73D1EEF1FD26FB2086B714</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4B3C602822DEF75691B45A7511F37B8D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>AEBAEC53CE57655B4D42BD5AF24AAFD4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B60E9F0AE34F3A31400D0FE5BE71C3B5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Internal</string>
-			<key>path</key>
-			<string>Internal</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AFBD53DF19236AF18BA25B8BE6A247E7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>CoreDataExtension.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3A1856B5B345E4B652D203A7D4E6ECD</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods_Swiftizy_Example.framework</string>
-			<key>path</key>
-			<string>Pods_Swiftizy_Example.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>B46E4F1A771FF9240E6FFB1B07C895D6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-Swiftizy_Tests-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B51A0D2FC0AE4C6F90D0260F7A970D61</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>34E3EAB298B36B4D526F7A1DD23BF1DA</string>
-			<key>buildPhases</key>
-			<array>
-				<string>6291833B5C542B5CC66C750B115DE9EB</string>
-				<string>D0B9F0DFB6255473227427F10A49E497</string>
-				<string>EEF7B531368EC7E4E5C1CE27DA8EABE6</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Swiftizy-Swiftizy</string>
-			<key>productName</key>
-			<string>Swiftizy-Swiftizy</string>
-			<key>productReference</key>
-			<string>42EC659E7D118D8AEC38114456A52A4F</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle</string>
-		</dict>
-		<key>B5D911F2395C473C0F84D8A45729EC19</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>3D67782650F3E8A063812222D75152E5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B60E9F0AE34F3A31400D0FE5BE71C3B5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>InternalToolsForParser.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>BBDA94CFDA4D6840968656B8D828E086</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-Swiftizy_Tests-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BC3CA7F9E30CC8F7E2DD044DD34432FC</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BF6342C8B29F4CEEA088EFF7AB4DE362</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BEE090B993C8C8F18DC561591B2A0BFD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9EED802265105D5A05720BD496A81073</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BF6342C8B29F4CEEA088EFF7AB4DE362</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3E4E89230EF59BC255123B67864ACF77</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C0D4D865D0F522995A36FF43E75D1138</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-Swiftizy_Tests-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C28E640BBBB77964E15292D71794ECF9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Swiftizy-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C2C183EA4E3A9532EC4B3A25F8CCB0CB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>AFBD53DF19236AF18BA25B8BE6A247E7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C5731C5171A1C8D9EB6577723C909944</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Swiftizy</string>
-			<key>target</key>
-			<string>69BA19BD3981A93B91EC40589B5E9740</string>
-			<key>targetProxy</key>
-			<string>A1A2DEF2A89CAFF20AFB88AD7106E4EE</string>
-		</dict>
-		<key>C75285B00FC9DBD7E1CA93E6101E88CE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ViewExtension.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C87E37FD1EA88F5E940CCAB49F5CADEA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CACFDC0866DAC4A12EB672C5419D7D94</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0DBB1BA07113123CB2D75DDAF483DDB5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CADB298338C56A9A27A65D68FCD68D59</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>0859690D7228D8A2A4A19DB0E1D1C54F</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>Swiftizy</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>bundle</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>D0B9F0DFB6255473227427F10A49E497</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D1FD52DCC635FEB2D33BCA7BE078E11A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>12FFFB3C57ACE20BCED0D10E242B4A2C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>D41D8CD98F00B204E9800998ECF8427E</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0700</string>
-				<key>LastUpgradeCheck</key>
-				<string>0700</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>7DB346D0F39D3F0E887471402A8071AB</string>
-			<key>productRefGroup</key>
-			<string>AC5183593BB5CCD223E9FE547256033A</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>769318708DD48D0E53B4E8F650CED733</string>
-				<string>5DD82538B87F1B26F9C75219B1967DA2</string>
-				<string>69BA19BD3981A93B91EC40589B5E9740</string>
-				<string>B51A0D2FC0AE4C6F90D0260F7A970D61</string>
-			</array>
-		</dict>
-		<key>D84817ADD771D00B5B3A240710B37660</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>JsonRelationshipDescription.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D911D86CBB0054380544153DB908328E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>4A2A28E4E74F6E0604B822E3E9AF0066</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>DDE551108DEBC01F9C82813E5EC139E0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F2319FD061609304A8AF97D9EC6F5105</string>
-				<string>1CCE7570E547E47C220D56BC5F082908</string>
-				<string>E03E70B48CFC75F5F90B299086A4D800</string>
-				<string>A1F9B7E6C01BC6FB8BB6B3F971FCB4A5</string>
-				<string>FF2238346AB5CC4F26A5200B064F3EF4</string>
-				<string>2512FEE14CCA0952C5374413F36884F6</string>
-				<string>DDFE6833954DB6461A0CC4BC558CAC76</string>
-				<string>3E269B665773D0E55E293517B9A59410</string>
-				<string>ED8B49B75A2C8DCDAE1484894E8716E1</string>
-				<string>2E2AE160F3151FE379FD3B0027CFA5F9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-Swiftizy_Example</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-Swiftizy_Example</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DDEC098A118D345D75D4B9949B74A12F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ColorExtension.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DDFE6833954DB6461A0CC4BC558CAC76</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-Swiftizy_Example-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DE4FE35F9A890E8463F5F6EDD87100E2</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>ED8B49B75A2C8DCDAE1484894E8716E1</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-Swiftizy_Example/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-Swiftizy_Example/Pods-Swiftizy_Example.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_Swiftizy_Example</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>E03E70B48CFC75F5F90B299086A4D800</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-Swiftizy_Example-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E1691E57D8B150C8AFE3C02EF2648564</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Swiftizy</string>
-			<key>target</key>
-			<string>69BA19BD3981A93B91EC40589B5E9740</string>
-			<key>targetProxy</key>
-			<string>1B125D40446DB277A7EA1699EDFEA056</string>
-		</dict>
-		<key>E5520EE9B17A01F69870109CDB67AE67</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>StringExtension.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>ED8B49B75A2C8DCDAE1484894E8716E1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-Swiftizy_Example.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EEF7B531368EC7E4E5C1CE27DA8EABE6</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>EF2035E65034564D9091CD2EAFD86713</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D84817ADD771D00B5B3A240710B37660</string>
-				<string>9EED802265105D5A05720BD496A81073</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Class</string>
-			<key>path</key>
-			<string>Class</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EF4E7AE007D38DFAEE4BEB35F21029AF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0F10B94236D8C77FE0879355A3B4A5BE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F2319FD061609304A8AF97D9EC6F5105</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F27716377A614AA3FB57C6641E3797D1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ObjectParser.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FAC2B3A08D6AEB4FD278213E00DBDDAF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C28E640BBBB77964E15292D71794ECF9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FB80B2EEECCD7E333D37825F4F463398</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>2E2AE160F3151FE379FD3B0027CFA5F9</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-Swiftizy_Example/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-Swiftizy_Example/Pods-Swiftizy_Example.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_Swiftizy_Example</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>FBEB7764A4E1E7567054CF300EAC293D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Translations.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FCA655CAC728B9992A31430F3D37255D</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>0859690D7228D8A2A4A19DB0E1D1C54F</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>Swiftizy</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>bundle</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>FF2238346AB5CC4F26A5200B064F3EF4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-Swiftizy_Example-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>D41D8CD98F00B204E9800998ECF8427E</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02D52EE1BA048D73B62D77DEC43C987E /* Fetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A4BDBFC47F6911676B211CC98A52F4 /* Fetching.swift */; };
+		12FFFB3C57ACE20BCED0D10E242B4A2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		1C74B5363A27300058BB63CC76F544DA /* Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEB7764A4E1E7567054CF300EAC293D /* Translations.swift */; };
+		2517C1A06EA98B3698722C071C87ADC6 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75285B00FC9DBD7E1CA93E6101E88CE /* ViewExtension.swift */; };
+		25A93CDFF39C933AD79C8102FA7BBA01 /* RestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF17015BE953E98B80F03D3F9B76E4F /* RestManager.swift */; };
+		29E7E551AB664FDEB4E8400E2B11B298 /* Pods-Swiftizy_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2238346AB5CC4F26A5200B064F3EF4 /* Pods-Swiftizy_Example-dummy.m */; };
+		31F5BE83FBF13F7331FE05F7C4AE2292 /* PlistReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5796E20BA7977960A315A47F6033386 /* PlistReader.swift */; };
+		3D67782650F3E8A063812222D75152E5 /* Pods-Swiftizy_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BBDA94CFDA4D6840968656B8D828E086 /* Pods-Swiftizy_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		417381C82A045CC332BB2DAE74D24444 /* Deleting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D3221593CE16F031CF07A701767693 /* Deleting.swift */; };
+		4A2A28E4E74F6E0604B822E3E9AF0066 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		4B3B891A6BCC93F655C80630CDB72CA1 /* Swiftizy.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 42EC659E7D118D8AEC38114456A52A4F /* Swiftizy.bundle */; };
+		4B3C602822DEF75691B45A7511F37B8D /* Swiftizy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BBCE8BBCD0993FFC6E1C80CEF918E08 /* Swiftizy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FE296BAAE164EB00C7354F814E83488 /* Creating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E536C27A3269B610BBDA65BFC7BFB1 /* Creating.swift */; };
+		4FF1C5FBB5137760A212D42D75C55F71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		51E76C366377B584546E5EE09DBD3B36 /* InternalToolsForParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60E9F0AE34F3A31400D0FE5BE71C3B5 /* InternalToolsForParser.swift */; };
+		52B4D32965A37C34F6D833AAD8B4A4E1 /* Pods-Swiftizy_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E269B665773D0E55E293517B9A59410 /* Pods-Swiftizy_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		534248C3091DFBCA07A877D1F1F408D0 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3090032A8A279816EA284B88A504E34C /* CoreDataManager.swift */; };
+		78DD840FA5CC9B081F21402A76B63AF1 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048740E33BAAD6878D2BA9326012142D /* DateExtension.swift */; };
+		81C6C1AEDB570E6643B415A8C7198078 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5520EE9B17A01F69870109CDB67AE67 /* StringExtension.swift */; };
+		968E031851C2686EADBCC2D9ABD77F8F /* ObjectParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27716377A614AA3FB57C6641E3797D1 /* ObjectParser.swift */; };
+		9708CEB97A30AB2DEA8E31B818FA63D9 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713C82C30FEA7B72C3FF1E1BF9EF4219 /* StreamReader.swift */; };
+		9C9746D32BA16F993637D73AFE5BBBD4 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC098A118D345D75D4B9949B74A12F /* ColorExtension.swift */; };
+		A279791680E9B4F59D2C289CD444A549 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52115E7AF4375EFD8BC13A1738588B8C /* JsonParser.swift */; };
+		AB0D5F5496015F8F4D517A5B7CC00449 /* JsonRelationshipDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84817ADD771D00B5B3A240710B37660 /* JsonRelationshipDescription.swift */; };
+		BEE090B993C8C8F18DC561591B2A0BFD /* NexosError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EED802265105D5A05720BD496A81073 /* NexosError.swift */; };
+		C2C183EA4E3A9532EC4B3A25F8CCB0CB /* CoreDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBD53DF19236AF18BA25B8BE6A247E7 /* CoreDataExtension.swift */; };
+		CACFDC0866DAC4A12EB672C5419D7D94 /* Counting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBB1BA07113123CB2D75DDAF483DDB5 /* Counting.swift */; };
+		EF4E7AE007D38DFAEE4BEB35F21029AF /* Pods-Swiftizy_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F10B94236D8C77FE0879355A3B4A5BE /* Pods-Swiftizy_Tests-dummy.m */; };
+		FAC2B3A08D6AEB4FD278213E00DBDDAF /* Swiftizy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C28E640BBBB77964E15292D71794ECF9 /* Swiftizy-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1B125D40446DB277A7EA1699EDFEA056 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69BA19BD3981A93B91EC40589B5E9740;
+			remoteInfo = Swiftizy;
+		};
+		8B6BF56DC9818EA58D4E4ADFFD4A6D1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B51A0D2FC0AE4C6F90D0260F7A970D61;
+			remoteInfo = "Swiftizy-Swiftizy";
+		};
+		A1A2DEF2A89CAFF20AFB88AD7106E4EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69BA19BD3981A93B91EC40589B5E9740;
+			remoteInfo = Swiftizy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		048740E33BAAD6878D2BA9326012142D /* DateExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		0859690D7228D8A2A4A19DB0E1D1C54F /* Swiftizy.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Swiftizy.xcconfig; sourceTree = "<group>"; };
+		0AB977A7E779882715BCE06B3BFDB247 /* Pods-Swiftizy_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Swiftizy_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		0DBB1BA07113123CB2D75DDAF483DDB5 /* Counting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Counting.swift; sourceTree = "<group>"; };
+		0F10B94236D8C77FE0879355A3B4A5BE /* Pods-Swiftizy_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Swiftizy_Tests-dummy.m"; sourceTree = "<group>"; };
+		1CCE7570E547E47C220D56BC5F082908 /* Pods-Swiftizy_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Swiftizy_Example.modulemap"; sourceTree = "<group>"; };
+		1FED6B519C9C1760E588415D60186B04 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2512FEE14CCA0952C5374413F36884F6 /* Pods-Swiftizy_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Swiftizy_Example-frameworks.sh"; sourceTree = "<group>"; };
+		29E536C27A3269B610BBDA65BFC7BFB1 /* Creating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Creating.swift; sourceTree = "<group>"; };
+		2E2AE160F3151FE379FD3B0027CFA5F9 /* Pods-Swiftizy_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Swiftizy_Example.release.xcconfig"; sourceTree = "<group>"; };
+		3090032A8A279816EA284B88A504E34C /* CoreDataManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		37EB7EC43F64EA27B34B3C3A76A6384E /* Pods_Swiftizy_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiftizy_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A7C70D27C2B05C355E9EC45BE174031 /* Pods-Swiftizy_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Swiftizy_Tests-resources.sh"; sourceTree = "<group>"; };
+		3E269B665773D0E55E293517B9A59410 /* Pods-Swiftizy_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Swiftizy_Example-umbrella.h"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		42EC659E7D118D8AEC38114456A52A4F /* Swiftizy.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Swiftizy.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		50A4BDBFC47F6911676B211CC98A52F4 /* Fetching.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Fetching.swift; sourceTree = "<group>"; };
+		52115E7AF4375EFD8BC13A1738588B8C /* JsonParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
+		5245464A22FFD5E0C4B0B2D1D5A44A9E /* Pods-Swiftizy_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Swiftizy_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		55D3221593CE16F031CF07A701767693 /* Deleting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Deleting.swift; sourceTree = "<group>"; };
+		675B5DFC663F5A62648508F712139BC2 /* Swiftizy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swiftizy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DF17015BE953E98B80F03D3F9B76E4F /* RestManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestManager.swift; sourceTree = "<group>"; };
+		713C82C30FEA7B72C3FF1E1BF9EF4219 /* StreamReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StreamReader.swift; sourceTree = "<group>"; };
+		7BBCE8BBCD0993FFC6E1C80CEF918E08 /* Swiftizy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Swiftizy-umbrella.h"; sourceTree = "<group>"; };
+		8440387E9704F62D25396BD04D1E388B /* Pods-Swiftizy_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Swiftizy_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		84BCCF6E2DBDC3832F2EECE15EA976AC /* Pods-Swiftizy_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Swiftizy_Tests.modulemap"; sourceTree = "<group>"; };
+		8654430C0124E7B2D1F3873EDEB9172D /* Swiftizy-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Swiftizy-prefix.pch"; sourceTree = "<group>"; };
+		93F4DA8F7BF8F828B1C487D5559CD9B8 /* Swiftizy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Swiftizy.modulemap; sourceTree = "<group>"; };
+		9EED802265105D5A05720BD496A81073 /* NexosError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NexosError.swift; sourceTree = "<group>"; };
+		A1F9B7E6C01BC6FB8BB6B3F971FCB4A5 /* Pods-Swiftizy_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Swiftizy_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		A5796E20BA7977960A315A47F6033386 /* PlistReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlistReader.swift; sourceTree = "<group>"; };
+		AFBD53DF19236AF18BA25B8BE6A247E7 /* CoreDataExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoreDataExtension.swift; sourceTree = "<group>"; };
+		B3A1856B5B345E4B652D203A7D4E6ECD /* Pods_Swiftizy_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiftizy_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B46E4F1A771FF9240E6FFB1B07C895D6 /* Pods-Swiftizy_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Swiftizy_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B60E9F0AE34F3A31400D0FE5BE71C3B5 /* InternalToolsForParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InternalToolsForParser.swift; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BBDA94CFDA4D6840968656B8D828E086 /* Pods-Swiftizy_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Swiftizy_Tests-umbrella.h"; sourceTree = "<group>"; };
+		C0D4D865D0F522995A36FF43E75D1138 /* Pods-Swiftizy_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Swiftizy_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		C28E640BBBB77964E15292D71794ECF9 /* Swiftizy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Swiftizy-dummy.m"; sourceTree = "<group>"; };
+		C75285B00FC9DBD7E1CA93E6101E88CE /* ViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		C87E37FD1EA88F5E940CCAB49F5CADEA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D84817ADD771D00B5B3A240710B37660 /* JsonRelationshipDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JsonRelationshipDescription.swift; sourceTree = "<group>"; };
+		DDEC098A118D345D75D4B9949B74A12F /* ColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		DDFE6833954DB6461A0CC4BC558CAC76 /* Pods-Swiftizy_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Swiftizy_Example-resources.sh"; sourceTree = "<group>"; };
+		E03E70B48CFC75F5F90B299086A4D800 /* Pods-Swiftizy_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Swiftizy_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E5520EE9B17A01F69870109CDB67AE67 /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		ED8B49B75A2C8DCDAE1484894E8716E1 /* Pods-Swiftizy_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Swiftizy_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		F2319FD061609304A8AF97D9EC6F5105 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F27716377A614AA3FB57C6641E3797D1 /* ObjectParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ObjectParser.swift; sourceTree = "<group>"; };
+		FBEB7764A4E1E7567054CF300EAC293D /* Translations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Translations.swift; sourceTree = "<group>"; };
+		FF2238346AB5CC4F26A5200B064F3EF4 /* Pods-Swiftizy_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Swiftizy_Example-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D8D9397CB8BC345888BA524FBF32216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FF1C5FBB5137760A212D42D75C55F71 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0B9F0DFB6255473227427F10A49E497 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1FD52DCC635FEB2D33BCA7BE078E11A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12FFFB3C57ACE20BCED0D10E242B4A2C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D911D86CBB0054380544153DB908328E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A2A28E4E74F6E0604B822E3E9AF0066 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01CF63E7082B07F48F436EA06A701582 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DDE551108DEBC01F9C82813E5EC139E0 /* Pods-Swiftizy_Example */,
+				9F4E32199461BD9FD816D2820CC42E37 /* Pods-Swiftizy_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		029F740DBFA1703B1CDF291D8EC8F2D4 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				09946D51AFA0C8AC8FEAE989C151D285 /* Swiftizy */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		05E5B642B2A90652CAE3C79DE70AD5E7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C87E37FD1EA88F5E940CCAB49F5CADEA /* Info.plist */,
+				93F4DA8F7BF8F828B1C487D5559CD9B8 /* Swiftizy.modulemap */,
+				0859690D7228D8A2A4A19DB0E1D1C54F /* Swiftizy.xcconfig */,
+				C28E640BBBB77964E15292D71794ECF9 /* Swiftizy-dummy.m */,
+				8654430C0124E7B2D1F3873EDEB9172D /* Swiftizy-prefix.pch */,
+				7BBCE8BBCD0993FFC6E1C80CEF918E08 /* Swiftizy-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Swiftizy";
+			sourceTree = "<group>";
+		};
+		09946D51AFA0C8AC8FEAE989C151D285 /* Swiftizy */ = {
+			isa = PBXGroup;
+			children = (
+				05E5B642B2A90652CAE3C79DE70AD5E7 /* Support Files */,
+				8F2BDE993EB2880B3E4455074628F51E /* Swiftizy */,
+			);
+			name = Swiftizy;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		18401D53AC895D10D902A77F7783402B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EF2035E65034564D9091CD2EAFD86713 /* Class */,
+				580B42FF387A8AF9A943FF786748DF82 /* Extension */,
+				8BD73E17FADB28A40AD50282BBDAE101 /* Manager */,
+				72ACFB0F80E54745E6D80097DA2118C9 /* Utility */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		580B42FF387A8AF9A943FF786748DF82 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DDEC098A118D345D75D4B9949B74A12F /* ColorExtension.swift */,
+				AFBD53DF19236AF18BA25B8BE6A247E7 /* CoreDataExtension.swift */,
+				048740E33BAAD6878D2BA9326012142D /* DateExtension.swift */,
+				E5520EE9B17A01F69870109CDB67AE67 /* StringExtension.swift */,
+				C75285B00FC9DBD7E1CA93E6101E88CE /* ViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		72ACFB0F80E54745E6D80097DA2118C9 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				A5796E20BA7977960A315A47F6033386 /* PlistReader.swift */,
+				713C82C30FEA7B72C3FF1E1BF9EF4219 /* StreamReader.swift */,
+				FBEB7764A4E1E7567054CF300EAC293D /* Translations.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				029F740DBFA1703B1CDF291D8EC8F2D4 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				AC5183593BB5CCD223E9FE547256033A /* Products */,
+				01CF63E7082B07F48F436EA06A701582 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8BD73E17FADB28A40AD50282BBDAE101 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				3090032A8A279816EA284B88A504E34C /* CoreDataManager.swift */,
+				0DBB1BA07113123CB2D75DDAF483DDB5 /* Counting.swift */,
+				29E536C27A3269B610BBDA65BFC7BFB1 /* Creating.swift */,
+				55D3221593CE16F031CF07A701767693 /* Deleting.swift */,
+				50A4BDBFC47F6911676B211CC98A52F4 /* Fetching.swift */,
+				52115E7AF4375EFD8BC13A1738588B8C /* JsonParser.swift */,
+				F27716377A614AA3FB57C6641E3797D1 /* ObjectParser.swift */,
+				6DF17015BE953E98B80F03D3F9B76E4F /* RestManager.swift */,
+				AEBAEC53CE57655B4D42BD5AF24AAFD4 /* Internal */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		8F2BDE993EB2880B3E4455074628F51E /* Swiftizy */ = {
+			isa = PBXGroup;
+			children = (
+				18401D53AC895D10D902A77F7783402B /* Classes */,
+			);
+			path = Swiftizy;
+			sourceTree = "<group>";
+		};
+		9F4E32199461BD9FD816D2820CC42E37 /* Pods-Swiftizy_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1FED6B519C9C1760E588415D60186B04 /* Info.plist */,
+				84BCCF6E2DBDC3832F2EECE15EA976AC /* Pods-Swiftizy_Tests.modulemap */,
+				5245464A22FFD5E0C4B0B2D1D5A44A9E /* Pods-Swiftizy_Tests-acknowledgements.markdown */,
+				B46E4F1A771FF9240E6FFB1B07C895D6 /* Pods-Swiftizy_Tests-acknowledgements.plist */,
+				0F10B94236D8C77FE0879355A3B4A5BE /* Pods-Swiftizy_Tests-dummy.m */,
+				C0D4D865D0F522995A36FF43E75D1138 /* Pods-Swiftizy_Tests-frameworks.sh */,
+				3A7C70D27C2B05C355E9EC45BE174031 /* Pods-Swiftizy_Tests-resources.sh */,
+				BBDA94CFDA4D6840968656B8D828E086 /* Pods-Swiftizy_Tests-umbrella.h */,
+				8440387E9704F62D25396BD04D1E388B /* Pods-Swiftizy_Tests.debug.xcconfig */,
+				0AB977A7E779882715BCE06B3BFDB247 /* Pods-Swiftizy_Tests.release.xcconfig */,
+			);
+			name = "Pods-Swiftizy_Tests";
+			path = "Target Support Files/Pods-Swiftizy_Tests";
+			sourceTree = "<group>";
+		};
+		AC5183593BB5CCD223E9FE547256033A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3A1856B5B345E4B652D203A7D4E6ECD /* Pods_Swiftizy_Example.framework */,
+				37EB7EC43F64EA27B34B3C3A76A6384E /* Pods_Swiftizy_Tests.framework */,
+				42EC659E7D118D8AEC38114456A52A4F /* Swiftizy.bundle */,
+				675B5DFC663F5A62648508F712139BC2 /* Swiftizy.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEBAEC53CE57655B4D42BD5AF24AAFD4 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				B60E9F0AE34F3A31400D0FE5BE71C3B5 /* InternalToolsForParser.swift */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DDE551108DEBC01F9C82813E5EC139E0 /* Pods-Swiftizy_Example */ = {
+			isa = PBXGroup;
+			children = (
+				F2319FD061609304A8AF97D9EC6F5105 /* Info.plist */,
+				1CCE7570E547E47C220D56BC5F082908 /* Pods-Swiftizy_Example.modulemap */,
+				E03E70B48CFC75F5F90B299086A4D800 /* Pods-Swiftizy_Example-acknowledgements.markdown */,
+				A1F9B7E6C01BC6FB8BB6B3F971FCB4A5 /* Pods-Swiftizy_Example-acknowledgements.plist */,
+				FF2238346AB5CC4F26A5200B064F3EF4 /* Pods-Swiftizy_Example-dummy.m */,
+				2512FEE14CCA0952C5374413F36884F6 /* Pods-Swiftizy_Example-frameworks.sh */,
+				DDFE6833954DB6461A0CC4BC558CAC76 /* Pods-Swiftizy_Example-resources.sh */,
+				3E269B665773D0E55E293517B9A59410 /* Pods-Swiftizy_Example-umbrella.h */,
+				ED8B49B75A2C8DCDAE1484894E8716E1 /* Pods-Swiftizy_Example.debug.xcconfig */,
+				2E2AE160F3151FE379FD3B0027CFA5F9 /* Pods-Swiftizy_Example.release.xcconfig */,
+			);
+			name = "Pods-Swiftizy_Example";
+			path = "Target Support Files/Pods-Swiftizy_Example";
+			sourceTree = "<group>";
+		};
+		EF2035E65034564D9091CD2EAFD86713 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				D84817ADD771D00B5B3A240710B37660 /* JsonRelationshipDescription.swift */,
+				9EED802265105D5A05720BD496A81073 /* NexosError.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		904FC834FC6F9351FABA4B2D8B529BE7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B4D32965A37C34F6D833AAD8B4A4E1 /* Pods-Swiftizy_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD8D0C808B73D1EEF1FD26FB2086B714 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B3C602822DEF75691B45A7511F37B8D /* Swiftizy-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5D911F2395C473C0F84D8A45729EC19 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D67782650F3E8A063812222D75152E5 /* Pods-Swiftizy_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5DD82538B87F1B26F9C75219B1967DA2 /* Pods-Swiftizy_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E5A3BD0F96D52A7D83014F79219BDDC /* Build configuration list for PBXNativeTarget "Pods-Swiftizy_Tests" */;
+			buildPhases = (
+				577E09679BE0DD9C5873FAC0439B1397 /* Sources */,
+				8D8D9397CB8BC345888BA524FBF32216 /* Frameworks */,
+				B5D911F2395C473C0F84D8A45729EC19 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1691E57D8B150C8AFE3C02EF2648564 /* PBXTargetDependency */,
+			);
+			name = "Pods-Swiftizy_Tests";
+			productName = "Pods-Swiftizy_Tests";
+			productReference = 37EB7EC43F64EA27B34B3C3A76A6384E /* Pods_Swiftizy_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		69BA19BD3981A93B91EC40589B5E9740 /* Swiftizy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5142AD1A1B5E61880ED623A2EED329A3 /* Build configuration list for PBXNativeTarget "Swiftizy" */;
+			buildPhases = (
+				7A04CC27D0D01A7BCC43C7983DED2BB9 /* Sources */,
+				D911D86CBB0054380544153DB908328E /* Frameworks */,
+				0F665B5763A138E5FDC824B4037C0EA0 /* Resources */,
+				AD8D0C808B73D1EEF1FD26FB2086B714 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42C81BF484189EBEDBDA64AB813294DE /* PBXTargetDependency */,
+			);
+			name = Swiftizy;
+			productName = Swiftizy;
+			productReference = 675B5DFC663F5A62648508F712139BC2 /* Swiftizy.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		769318708DD48D0E53B4E8F650CED733 /* Pods-Swiftizy_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07A8C0027524260C454C8A7B02F4295C /* Build configuration list for PBXNativeTarget "Pods-Swiftizy_Example" */;
+			buildPhases = (
+				34167EDFDBEF7CCC21B8D7FEF1CFE651 /* Sources */,
+				D1FD52DCC635FEB2D33BCA7BE078E11A /* Frameworks */,
+				904FC834FC6F9351FABA4B2D8B529BE7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5731C5171A1C8D9EB6577723C909944 /* PBXTargetDependency */,
+			);
+			name = "Pods-Swiftizy_Example";
+			productName = "Pods-Swiftizy_Example";
+			productReference = B3A1856B5B345E4B652D203A7D4E6ECD /* Pods_Swiftizy_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B51A0D2FC0AE4C6F90D0260F7A970D61 /* Swiftizy-Swiftizy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34E3EAB298B36B4D526F7A1DD23BF1DA /* Build configuration list for PBXNativeTarget "Swiftizy-Swiftizy" */;
+			buildPhases = (
+				6291833B5C542B5CC66C750B115DE9EB /* Sources */,
+				D0B9F0DFB6255473227427F10A49E497 /* Frameworks */,
+				EEF7B531368EC7E4E5C1CE27DA8EABE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Swiftizy-Swiftizy";
+			productName = "Swiftizy-Swiftizy";
+			productReference = 42EC659E7D118D8AEC38114456A52A4F /* Swiftizy.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					5DD82538B87F1B26F9C75219B1967DA2 = {
+						DevelopmentTeam = BN8JB3H5EV;
+						DevelopmentTeamName = "Julien Henrard (Personal Team)";
+					};
+					69BA19BD3981A93B91EC40589B5E9740 = {
+						DevelopmentTeam = BN8JB3H5EV;
+						DevelopmentTeamName = "Julien Henrard (Personal Team)";
+						LastSwiftMigration = 0800;
+					};
+					769318708DD48D0E53B4E8F650CED733 = {
+						DevelopmentTeam = BN8JB3H5EV;
+						DevelopmentTeamName = "Julien Henrard (Personal Team)";
+					};
+				};
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = AC5183593BB5CCD223E9FE547256033A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				769318708DD48D0E53B4E8F650CED733 /* Pods-Swiftizy_Example */,
+				5DD82538B87F1B26F9C75219B1967DA2 /* Pods-Swiftizy_Tests */,
+				69BA19BD3981A93B91EC40589B5E9740 /* Swiftizy */,
+				B51A0D2FC0AE4C6F90D0260F7A970D61 /* Swiftizy-Swiftizy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F665B5763A138E5FDC824B4037C0EA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B3B891A6BCC93F655C80630CDB72CA1 /* Swiftizy.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEF7B531368EC7E4E5C1CE27DA8EABE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		34167EDFDBEF7CCC21B8D7FEF1CFE651 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29E7E551AB664FDEB4E8400E2B11B298 /* Pods-Swiftizy_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		577E09679BE0DD9C5873FAC0439B1397 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF4E7AE007D38DFAEE4BEB35F21029AF /* Pods-Swiftizy_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6291833B5C542B5CC66C750B115DE9EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A04CC27D0D01A7BCC43C7983DED2BB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C9746D32BA16F993637D73AFE5BBBD4 /* ColorExtension.swift in Sources */,
+				C2C183EA4E3A9532EC4B3A25F8CCB0CB /* CoreDataExtension.swift in Sources */,
+				534248C3091DFBCA07A877D1F1F408D0 /* CoreDataManager.swift in Sources */,
+				CACFDC0866DAC4A12EB672C5419D7D94 /* Counting.swift in Sources */,
+				4FE296BAAE164EB00C7354F814E83488 /* Creating.swift in Sources */,
+				78DD840FA5CC9B081F21402A76B63AF1 /* DateExtension.swift in Sources */,
+				417381C82A045CC332BB2DAE74D24444 /* Deleting.swift in Sources */,
+				02D52EE1BA048D73B62D77DEC43C987E /* Fetching.swift in Sources */,
+				51E76C366377B584546E5EE09DBD3B36 /* InternalToolsForParser.swift in Sources */,
+				A279791680E9B4F59D2C289CD444A549 /* JsonParser.swift in Sources */,
+				AB0D5F5496015F8F4D517A5B7CC00449 /* JsonRelationshipDescription.swift in Sources */,
+				BEE090B993C8C8F18DC561591B2A0BFD /* NexosError.swift in Sources */,
+				968E031851C2686EADBCC2D9ABD77F8F /* ObjectParser.swift in Sources */,
+				31F5BE83FBF13F7331FE05F7C4AE2292 /* PlistReader.swift in Sources */,
+				25A93CDFF39C933AD79C8102FA7BBA01 /* RestManager.swift in Sources */,
+				9708CEB97A30AB2DEA8E31B818FA63D9 /* StreamReader.swift in Sources */,
+				81C6C1AEDB570E6643B415A8C7198078 /* StringExtension.swift in Sources */,
+				FAC2B3A08D6AEB4FD278213E00DBDDAF /* Swiftizy-dummy.m in Sources */,
+				1C74B5363A27300058BB63CC76F544DA /* Translations.swift in Sources */,
+				2517C1A06EA98B3698722C071C87ADC6 /* ViewExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42C81BF484189EBEDBDA64AB813294DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Swiftizy-Swiftizy";
+			target = B51A0D2FC0AE4C6F90D0260F7A970D61 /* Swiftizy-Swiftizy */;
+			targetProxy = 8B6BF56DC9818EA58D4E4ADFFD4A6D1A /* PBXContainerItemProxy */;
+		};
+		C5731C5171A1C8D9EB6577723C909944 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Swiftizy;
+			target = 69BA19BD3981A93B91EC40589B5E9740 /* Swiftizy */;
+			targetProxy = A1A2DEF2A89CAFF20AFB88AD7106E4EE /* PBXContainerItemProxy */;
+		};
+		E1691E57D8B150C8AFE3C02EF2648564 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Swiftizy;
+			target = 69BA19BD3981A93B91EC40589B5E9740 /* Swiftizy */;
+			targetProxy = 1B125D40446DB277A7EA1699EDFEA056 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		21AC3B9A7A29B79223A50FE3487E16FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AB977A7E779882715BCE06B3BFDB247 /* Pods-Swiftizy_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Swiftizy_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Swiftizy_Tests/Pods-Swiftizy_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Swiftizy_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2D0009160976D55A927FDCBC423DA895 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0859690D7228D8A2A4A19DB0E1D1C54F /* Swiftizy.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Swiftizy/Swiftizy-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Swiftizy/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Swiftizy/Swiftizy.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Swiftizy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		552D02D5BA751AC2E8790D2811D496CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		595712BC8B38B5FD34F6CC1CCDA55370 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8440387E9704F62D25396BD04D1E388B /* Pods-Swiftizy_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Swiftizy_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Swiftizy_Tests/Pods-Swiftizy_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Swiftizy_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		78F66859784DC7BDA34C12FCB8B6F365 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0859690D7228D8A2A4A19DB0E1D1C54F /* Swiftizy.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Swiftizy/Swiftizy-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Swiftizy/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Swiftizy/Swiftizy.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Swiftizy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CADB298338C56A9A27A65D68FCD68D59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0859690D7228D8A2A4A19DB0E1D1C54F /* Swiftizy.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = Swiftizy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		DE4FE35F9A890E8463F5F6EDD87100E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED8B49B75A2C8DCDAE1484894E8716E1 /* Pods-Swiftizy_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Swiftizy_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Swiftizy_Example/Pods-Swiftizy_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Swiftizy_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FB80B2EEECCD7E333D37825F4F463398 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E2AE160F3151FE379FD3B0027CFA5F9 /* Pods-Swiftizy_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Swiftizy_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Swiftizy_Example/Pods-Swiftizy_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Swiftizy_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FCA655CAC728B9992A31430F3D37255D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0859690D7228D8A2A4A19DB0E1D1C54F /* Swiftizy.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = Swiftizy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07A8C0027524260C454C8A7B02F4295C /* Build configuration list for PBXNativeTarget "Pods-Swiftizy_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE4FE35F9A890E8463F5F6EDD87100E2 /* Debug */,
+				FB80B2EEECCD7E333D37825F4F463398 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552D02D5BA751AC2E8790D2811D496CA /* Debug */,
+				10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34E3EAB298B36B4D526F7A1DD23BF1DA /* Build configuration list for PBXNativeTarget "Swiftizy-Swiftizy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCA655CAC728B9992A31430F3D37255D /* Debug */,
+				CADB298338C56A9A27A65D68FCD68D59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5142AD1A1B5E61880ED623A2EED329A3 /* Build configuration list for PBXNativeTarget "Swiftizy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78F66859784DC7BDA34C12FCB8B6F365 /* Debug */,
+				2D0009160976D55A927FDCBC423DA895 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E5A3BD0F96D52A7D83014F79219BDDC /* Build configuration list for PBXNativeTarget "Pods-Swiftizy_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				595712BC8B38B5FD34F6CC1CCDA55370 /* Debug */,
+				21AC3B9A7A29B79223A50FE3487E16FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -9,9 +9,10 @@
 import Foundation
 import CoreData
 
+@available(iOS 10.0, *)
 public class Fetching {
     
-    var managedContext : NSManagedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
+    var managedContext : NSManagedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
     
     init(context: NSManagedObjectContext) {
         self.managedContext = context
@@ -20,12 +21,12 @@ public class Fetching {
     /**
      Find all for the entity
      */
-    public func all(entityName: String) -> [NSManagedObject]{
-        let fetchRequest = NSFetchRequest(entityName: entityName)
+    public func all(entity: AnyClass) -> [NSManagedObject]{
+        let request: NSFetchRequest<NSFetchRequestResult> = entity.fetchRequest()
         
         do {
             let results =
-                try self.managedContext.executeFetchRequest(fetchRequest)
+                try self.managedContext.fetch(request)
             return results as! [NSManagedObject]
             
         } catch let error as NSError {
@@ -37,15 +38,15 @@ public class Fetching {
     /**
     Find all and order by
     */
-    public func orderBy(entityName : String, orderBy : String, ascending: Bool) -> [NSManagedObject]{
+    public func orderBy(entity : AnyClass, orderBy : String, ascending: Bool) -> [NSManagedObject]{
         let descriptor = NSSortDescriptor(key: orderBy, ascending: ascending)
         
-        let fetchRequest = NSFetchRequest(entityName: entityName)
-        fetchRequest.sortDescriptors = [descriptor]
+        let request: NSFetchRequest<NSFetchRequestResult> = entity.fetchRequest()
+        request.sortDescriptors = [descriptor]
         
         do {
             let results =
-                try managedContext.executeFetchRequest(fetchRequest)
+                try managedContext.fetch(request)
             return results as! [NSManagedObject]
             
         } catch let error as NSError {
@@ -54,14 +55,14 @@ public class Fetching {
         }
     }
     
-    public func custom(entityName : String, descriptors : [NSSortDescriptor]?, predicate : NSPredicate?) -> [NSManagedObject]{
+    public func custom(entity : AnyClass, descriptors : [NSSortDescriptor]?, predicate : NSPredicate?) -> [NSManagedObject]{
         
-        let fetchRequest = NSFetchRequest(entityName: entityName)
-        fetchRequest.sortDescriptors = descriptors
-        fetchRequest.predicate = predicate
+        let request: NSFetchRequest<NSFetchRequestResult> = entity.fetchRequest()
+        request.sortDescriptors = descriptors
+        request.predicate = predicate
         do {
             let results =
-                try managedContext.executeFetchRequest(fetchRequest)
+                try managedContext.fetch(request)
             return results as! [NSManagedObject]
             
         } catch let error as NSError {
@@ -70,12 +71,12 @@ public class Fetching {
         }
     }
     
-    public func equalString(entityName : String, attributeName : String, attributeValue: String) -> [NSManagedObject]{
+    public func equalString(entity : AnyClass, attributeName : String, attributeValue: String) -> [NSManagedObject]{
         
-        let fetchRequest = NSFetchRequest(entityName: entityName)
-        fetchRequest.predicate = NSPredicate(format: "\(attributeName) == %@", attributeValue)
+        let request: NSFetchRequest<NSFetchRequestResult> = entity.fetchRequest()
+        request.predicate = NSPredicate(format: "\(attributeName) == %@", attributeValue)
         do{
-            if let fetchResults = try managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject] {
+            if let fetchResults = try managedContext.fetch(request) as? [NSManagedObject] {
                 return fetchResults
             }
         } catch let error as NSError {
@@ -84,12 +85,12 @@ public class Fetching {
         return []
     }
     
-    public func equalInt(entityName : String, attributeName : String, attributeValue: Int) -> [NSManagedObject]{
+    public func equalInt(entity : AnyClass, attributeName : String, attributeValue: Int) -> [NSManagedObject]{
         
-        let fetchRequest = NSFetchRequest(entityName: entityName)
-        fetchRequest.predicate = NSPredicate(format: "\(attributeName) = %d", attributeValue)
+        let request: NSFetchRequest<NSFetchRequestResult> = entity.fetchRequest()
+        request.predicate = NSPredicate(format: "\(attributeName) = %d", attributeValue)
         do{
-            if let fetchResults = try managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject] {
+            if let fetchResults = try managedContext.fetch(request) as? [NSManagedObject] {
                 return fetchResults
             }
         } catch let error as NSError {
@@ -98,12 +99,12 @@ public class Fetching {
         return []
     }
     
-    public func equalBool(entityName : String, attributeName : String, bool: Bool) -> [NSManagedObject] {
+    public func equalBool(entity : AnyClass, attributeName : String, bool: Bool) -> [NSManagedObject] {
         
-        let fetchRequest = NSFetchRequest(entityName: entityName)
-        fetchRequest.predicate = NSPredicate(format: "\(attributeName) = \(bool)")
+        let request: NSFetchRequest<NSFetchRequestResult> = entity.fetchRequest()
+        request.predicate = NSPredicate(format: "\(attributeName) = \(bool)")
         do{
-            if let fetchResults = try managedContext.executeFetchRequest(fetchRequest) as? [NSManagedObject] {
+            if let fetchResults = try managedContext.fetch(request) as? [NSManagedObject] {
                 return fetchResults
             }
         } catch let error as NSError {

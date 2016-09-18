@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Swiftizy
 
+@available(iOS 10.0, *)
 class TableViewController: UITableViewController {
 
     
@@ -17,28 +18,31 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.books = CoreDataManager.Fetch.all("Book") as? [Book]
+        self.books = CoreDataManager.Fetch.all(entity: Book.self) as? [Book]
+        print("NUM OF BOOKS: \(self.books?.count)")
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return books!.count
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let book = books![indexPath.row]
-        let publisher = (book.publishers?.allObjects as! [Publisher])[0]
-        let alert = UIAlertController(title: "Book details", message: "Title: \(book.pk_title!)\n Pages: \(book.number_of_pages)\n Publisher: \(publisher.name!)", preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
-    }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath)
         cell.textLabel?.text = books![indexPath.row].pk_title!
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let book = books![indexPath.row]
+        let publisher = (book.publishers?.allObjects as! [Publisher])[0]
+        let alert = UIAlertController(title: "Book details", message: "Title: \(book.pk_title!)\n Pages: \(book.number_of_pages)\n Publisher: \(publisher.name!)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 }
