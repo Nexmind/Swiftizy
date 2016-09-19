@@ -1,0 +1,16 @@
+PODS:
+  - Swiftizy (1.2.10)
+
+DEPENDENCIES:
+  - Swiftizy (from `../`)
+
+EXTERNAL SOURCES:
+  Swiftizy:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Swiftizy: c61b6eb9bf5057b5c822fccbf04ae262dbbaab19
+
+PODFILE CHECKSUM: 6b435264fbd928a318404f3a62cb0335e204f39d
+
+COCOAPODS: 1.1.0.rc.2

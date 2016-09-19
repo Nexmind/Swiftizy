@@ -1,0 +1,6 @@
+framework module Swiftizy {
+  umbrella header "Swiftizy-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Swiftizy_Example' do
+  pod 'Swiftizy', :path => '../'
+end
+
+target 'Swiftizy_Tests' do
+  pod 'Swiftizy', :path => '../'
+
+  
+end
