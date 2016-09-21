@@ -85,7 +85,7 @@ open class RestManager {
      - parameter url:     The URL for calling WS.
      - parameter responseHandler:   Behavior after the request.
      */
-    open static func GET(_ url: String, parameters: [String: String], withBehaviorForArray responseHandler: @escaping ([NSDictionary]?, NexosError) -> Void){
+    open static func GET(_ url: String, parameters: [String: String]?, withBehaviorForArray responseHandler: @escaping ([NSDictionary]?, NexosError) -> Void){
         let postEndpoint: String = url
         let nError : NexosError = NexosError()
         guard let NSUrl = URL(string: postEndpoint) else {
@@ -98,7 +98,7 @@ open class RestManager {
         let session = URLSession(configuration: config)
         
         if parameters != nil {
-            for param in parameters {
+            for param in parameters! {
                 urlRequest.addValue(param.value, forHTTPHeaderField: param.key)
             }
         }
@@ -149,7 +149,7 @@ open class RestManager {
      - parameter jsonToPost:   json string to send
      - parameter responseHandler:   response after the post (response, error) if not parsable, return data in string (dataString).
      */
-    open static func POST(_ url: String, parameters: [String: String], jsonToPost: String, responseHandler: @escaping (NSDictionary?, NexosError) -> Void){
+    open static func POST(_ url: String, parameters: [String: String]?, jsonToPost: String, responseHandler: @escaping (NSDictionary?, NexosError) -> Void){
         // create the request & response
         URLCache.shared.removeAllCachedResponses()
         let request = NSMutableURLRequest(url: URL(string: url)!, cachePolicy: NSURLRequest.CachePolicy.reloadIgnoringLocalCacheData, timeoutInterval: 10)
@@ -164,7 +164,7 @@ open class RestManager {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         if parameters != nil {
-            for param in parameters {
+            for param in parameters! {
                 request.addValue(param.value, forHTTPHeaderField: param.key)
             }
         }

@@ -21,12 +21,12 @@ public class JsonParser {
      - parameter anyClass:   the class of the entity.
      */
     
-    public static func jsonToManagedObject(dic: NSDictionary, createElseReturn entity: AnyClass, ignoreAttributes: [String]?) -> NSManagedObject {
+    @discardableResult public static func jsonToManagedObject(dic: NSDictionary, createElseReturn entity: AnyClass, ignoreAttributes: [String]?) -> NSManagedObject {
         return self.consumeJsonAndCreateEntityInCoreData(dic: dic, anyClass: entity, batchDescription: .CreateElseReturn, ignoreAttributes: ignoreAttributes)
         
     }
     
-    public static func jsonToManagedObject(dic: NSDictionary, createElseUpdate entity: AnyClass, ignoreAttributes: [String]?) -> NSManagedObject {
+    @discardableResult public static func jsonToManagedObject(dic: NSDictionary, createElseUpdate entity: AnyClass, ignoreAttributes: [String]?) -> NSManagedObject {
         return self.consumeJsonAndCreateEntityInCoreData(dic: dic, anyClass: entity, batchDescription: .CreateElseUpdate, ignoreAttributes: ignoreAttributes)
         
     }

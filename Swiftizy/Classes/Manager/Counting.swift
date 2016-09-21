@@ -18,7 +18,7 @@ public class Counting {
     }
     
     public func all(entity: AnyClass) -> Int {
-        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: NSStringFromClass(entity))
+        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: NSStringFromClass(entity).pathExtension)
         request.includesSubentities = false
         do {
             let count: Int = try self.managedContext.count(for: request)
@@ -33,7 +33,7 @@ public class Counting {
     }
     
     public func custom(entity: AnyClass, predicate: NSPredicate) -> Int{
-        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: NSStringFromClass(entity))
+        let request: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: NSStringFromClass(entity).pathExtension)
         request.predicate = predicate
         request.includesSubentities = false
         

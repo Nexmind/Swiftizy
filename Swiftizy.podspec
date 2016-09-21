@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Swiftizy"
-  s.version          = "1.3.1"
+  s.version          = "1.3.2"
   s.summary          = "Swiftizy help you in your development with CoreData, Rest, Json,..."
 
 # This description is used to generate tags and improve search results.
@@ -32,9 +32,9 @@ Pod::Spec.new do |s|
   s.platform = :ios, '8.0'
 
   s.source_files = 'Swiftizy/Classes/**/*'
-  s.resource_bundles = {
-    'Swiftizy' => ['Swiftizy/Assets/*.png']
-  }
+#s.resource_bundles = {
+#   'Swiftizy' => ['Swiftizy/Assets/*.png']
+# }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

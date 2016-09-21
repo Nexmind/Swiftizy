@@ -1,5 +1,5 @@
 PODS:
-  - Swiftizy (1.2.10)
+  - Swiftizy (1.3.2)
 
 DEPENDENCIES:
   - Swiftizy (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Swiftizy: c61b6eb9bf5057b5c822fccbf04ae262dbbaab19
+  Swiftizy: 88383226b2934975db0172c9cfd2788d2e4877e5
 
 PODFILE CHECKSUM: 6b435264fbd928a318404f3a62cb0335e204f39d
 
