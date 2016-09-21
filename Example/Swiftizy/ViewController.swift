@@ -9,7 +9,6 @@
 import UIKit
 import Swiftizy
 
-@available(iOS 10.0, *)
 class ViewController: UIViewController {
     
     
@@ -75,7 +74,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func deleteBooks(sender: AnyObject) {
+        if #available(iOS 9.0, *) {
             CoreDataManager.Delete.batch(entity: Book.self)
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     

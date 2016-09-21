@@ -9,7 +9,6 @@
 import UIKit
 import CoreData
 
-@available(iOS 9.0, *)
 public class ObjectParser: NSObject {
     
     
