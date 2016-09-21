@@ -8,7 +8,6 @@
 
 import Foundation
 
-@available(iOS 9.0, *)
 public class InternalToolsForParser {
     
     static func attributeIsPK(name: String) -> Bool {

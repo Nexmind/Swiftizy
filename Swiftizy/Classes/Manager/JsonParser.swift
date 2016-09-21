@@ -10,7 +10,6 @@ import Foundation
 import CoreData
 
 
-@available(iOS 10.0, *)
 public class JsonParser {
     
     
