@@ -60,9 +60,9 @@ open class RestManager {
                 let post = try JSONSerialization.jsonObject(with: responseData,
                                                             options: []) as! NSDictionary
                 NSLog("|| RestManager (GET) || ---> SUCCESS")
-                nError.errorTitle = error?.localizedDescription
-                nError.errorDescription = (error as? NSError)?.localizedFailureReason
-                nError.errorCode = (error as? NSError)?.code
+                nError.errorTitle = nil
+                nError.errorDescription = nil
+                nError.errorCode = 2°°
                 responseHandler(post, nError)
             } catch  {
                 NSLog("---< !!! ERROR !!! >--- RestManager (GET): trying to convert data to JSON failed")
@@ -128,9 +128,9 @@ open class RestManager {
                 NSLog("|| RestManager (GET) || ---> SUCCESS")
                 let datastring = NSString(data: responseData, encoding: String.Encoding.utf8.rawValue)
                 NSLog(datastring as! String)
-                nError.errorTitle = error?.localizedDescription
-                nError.errorDescription = (error as! NSError).localizedFailureReason
-                nError.errorCode = (error as! NSError).code
+                nError.errorTitle = nil
+                nError.errorDescription = nil
+                nError.errorCode = 200
                 responseHandler(post, nError)
             } catch  {
                 NSLog("---< !!! ERROR !!! >--- RestManager (GET): trying to convert data to JSON failed")
@@ -199,8 +199,8 @@ open class RestManager {
                 let post = try JSONSerialization.jsonObject(with: responseData,
                                                             options: []) as! NSDictionary
                 NSLog("|| RestManager (POST RESPONSE) || ---> SUCCESS")
-                nError.errorTitle = error?.localizedDescription
-                nError.errorDescription = (error as! NSError).localizedFailureReason
+                nError.errorTitle = nil
+                nError.errorDescription = nil
                 nError.errorCode = 200
                 responseHandler(post, nError)
             } catch  {
