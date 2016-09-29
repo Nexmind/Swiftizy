@@ -62,7 +62,7 @@ open class RestManager {
                 NSLog("|| RestManager (GET) || ---> SUCCESS")
                 nError.errorTitle = nil
                 nError.errorDescription = nil
-                nError.errorCode = 2°°
+                nError.errorCode = 200
                 responseHandler(post, nError)
             } catch  {
                 NSLog("---< !!! ERROR !!! >--- RestManager (GET): trying to convert data to JSON failed")
